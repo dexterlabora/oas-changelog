@@ -4,9 +4,21 @@
 Generates a `changelog.md` and `changelog.json` file based on differences of two swagger / OAS v2 docs. 
 
 
-## Run
+## Generate Changelog
+```bash
+$ node index.js -o "./oas-files/Meraki openapiSpec 20-apr-19.json" -n "./oas-files/Meraki openapiSpec 26-apr-19.json"
 ```
-node index.js -o "./oas-files/Meraki openapiSpec 20-apr-19.json" -n "./oas-files/Meraki openapiSpec 26-apr-19.json"
+
+### Help
+```bash
+$ node index --help
+Usage: index [options]
+
+Options:
+  -o, --oldSpec <oldSpec>  The Meraki API Key
+  -n, --newSpec <newSpec>  The organization ID
+  -h, --help               output usage information
+$ 
 ```
 
 ## View
