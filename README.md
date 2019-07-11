@@ -37,6 +37,17 @@ Generated files are in the `./output/` directory
 - **Major**: `/organizations` (post) - OperationId turned from `createOrganizations` to `createOrganization`
 ```
 
+*Example*
+- **Major**: `/organizations/{organizationId}/admins` (post) - OperationId turned from `createOrganizationAdmins` to `createOrganizationAdmin`
+- **Major**: `/devices/{serial}/camera/analytics/zones/{zoneId}/history` - Deleted
+- **Major**: `/organizations/{organizationId}/networks` (post) - OperationId turned from `createOrganizationNetworks` to `createOrganizationNetwork`
+- **Major**: `/networks/{networkId}/cameras/{serial}/snapshot` (post) - OperationId turned from `snapshotNetworkCamera` to `generateNetworkCameraSnapshot`
+- **Major**: `/networks/{networkId}/devices/{serial}/blinkLeds` (post) - OperationId turned from `blinkLedsNetworkDevice` to `blinkNetworkDeviceLeds`
+- **Major**: `/networks/{networkId}/groupPolicies` (post) - OperationId turned from `createNetworkGroupPolicies` to `createNetworkGroupPolicy`
+- **Major**: `/networks/{networkId}/httpServers` (post) - OperationId turned from `createNetworkHttpServers` to `createNetworkHttpServer`
+- **Major**: `/networks/{networkId}/httpServers/webhookTests` (post) - OperationId turned from `createNetworkHttpServersWebhookTests` to `createNetworkHttpServersWebhookTest`
+- **Major**: `/organizations` (post) - OperationId turned from `createOrganizations` to `createOrganization`
+
 *changelog.json*
 ```
 [
