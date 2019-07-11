@@ -10,21 +10,52 @@ node index.js -o "./oas-files/Meraki openapiSpec 20-apr-19.json" -n "./oas-files
 ```
 
 ## View
-Generated files are in the `output` directory
+Generated files are in the `./output/` directory
 
-
+*changelog.md*
 ```
-- **Major**: `/networks/{network_id}/sm/devices/move` - Deleted
-- **Major**: `/networks/{network_id}/sm/devices/{deviceId}/unenroll` - Deleted
-- **Major**: `/networks/{network_id}/sm/profiles` - Deleted
-- **Major**: `/networks/{network_id}/sm/{id}/cellularUsageHistory` - Deleted
-- **Major**: `/networks/{networkId}/syslogServers` (put) - Param `updateNetworkSyslogServers` became required
-- **Major**: `/networks/{networkId}/connectionStats` (get) - Param `ssid` type turn from from `string` to `integer`
-- **Major**: `/networks/{networkId}/connectionStats` (get) - Param `vlan` type turn from from `string` to `integer`
-- **Major**: `/networks/{networkId}/devices/connectionStats` (get) - Param `ssid` type turn from from `string` to `integer`
+- **Major**: `/organizations/{organizationId}/admins` (post) - OperationId turned from `createOrganizationAdmins` to `createOrganizationAdmin`
+- **Major**: `/devices/{serial}/camera/analytics/zones/{zoneId}/history` - Deleted
+- **Major**: `/organizations/{organizationId}/networks` (post) - OperationId turned from `createOrganizationNetworks` to `createOrganizationNetwork`
+- **Major**: `/networks/{networkId}/cameras/{serial}/snapshot` (post) - OperationId turned from `snapshotNetworkCamera` to `generateNetworkCameraSnapshot`
+- **Major**: `/networks/{networkId}/devices/{serial}/blinkLeds` (post) - OperationId turned from `blinkLedsNetworkDevice` to `blinkNetworkDeviceLeds`
+- **Major**: `/networks/{networkId}/groupPolicies` (post) - OperationId turned from `createNetworkGroupPolicies` to `createNetworkGroupPolicy`
+- **Major**: `/networks/{networkId}/httpServers` (post) - OperationId turned from `createNetworkHttpServers` to `createNetworkHttpServer`
+- **Major**: `/networks/{networkId}/httpServers/webhookTests` (post) - OperationId turned from `createNetworkHttpServersWebhookTests` to `createNetworkHttpServersWebhookTest`
+- **Major**: `/organizations` (post) - OperationId turned from `createOrganizations` to `createOrganization`
+```
+
+*changelog.json*
+```
+[
+  {
+    "ruleId": "edit-operation-id",
+    "message": "`/organizations/{organizationId}/admins` (post) - OperationId turned from `createOrganizationAdmins` to `createOrganizationAdmin`",
+    "path": "/organizations/{organizationId}/admins",
+    "method": "post",
+    "previousOperationId": "createOrganizationAdmins",
+    "currentOperationId": "createOrganizationAdmin",
+    "type": "warnings"
+  },
+  {
+    "ruleId": "delete-path",
+    "message": "`/devices/{serial}/camera/analytics/zones/{zoneId}/history` - Deleted",
+    "path": "/devices/{serial}/camera/analytics/zones/{zoneId}/history",
+    "type": "warnings"
+  },
+  {
+    "ruleId": "edit-operation-id",
+    "message": "`/organizations/{organizationId}/networks` (post) - OperationId turned from `createOrganizationNetworks` to `createOrganizationNetwork`",
+    "path": "/organizations/{organizationId}/networks",
+    "method": "post",
+    "previousOperationId": "createOrganizationNetworks",
+    "currentOperationId": "createOrganizationNetwork",
+    "type": "warnings"
+  },
+  ...
 ```
 
 ## Dev Notes
 
 based on `swagger-diff` and `swagger-changelog`
-most modifications are with the `message` parameter formatting. 
+most customizations are with the `message` parameter formatting. 
