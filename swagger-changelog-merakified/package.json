@@ -1,0 +1,76 @@
+{
+  "_from": "swagger-changelog",
+  "_id": "swagger-changelog@1.1.0",
+  "_inBundle": false,
+  "_integrity": "sha1-Y9Pvtkqn0zvhn1yyzTgH2sRgJdY=",
+  "_location": "/swagger-changelog",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "swagger-changelog",
+    "name": "swagger-changelog",
+    "escapedName": "swagger-changelog",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/swagger-changelog/-/swagger-changelog-1.1.0.tgz",
+  "_shasum": "63d3efb64aa7d33be19f5cb2cd3807dac46025d6",
+  "_spec": "swagger-changelog",
+  "_where": "/Users/cory.guynn/dev/swagger/swagger-changelog-utility",
+  "author": {
+    "name": "Swimlane",
+    "email": "info@swimlane.com"
+  },
+  "bin": {
+    "swagger-changelog": "bin/swagger-changelog.js"
+  },
+  "bugs": {
+    "url": "https://github.com/swimlane/swagger-changelog/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "commander": "^2.9.0",
+    "damerau-levenshtein": "^1.0.3",
+    "swagger-diff": "^0.6.0"
+  },
+  "deprecated": false,
+  "description": "API changelog generator based on swagger diffs",
+  "devDependencies": {
+    "eslint": "^3.14.1",
+    "eslint-config-swimlane": "^1.0.0",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.3"
+  },
+  "eslintConfig": {
+    "extends": "swimlane/base",
+    "env": {
+      "es6": true,
+      "node": true
+    }
+  },
+  "homepage": "https://github.com/swimlane/swagger-changelog#readme",
+  "keywords": [
+    "swagger",
+    "swimlane",
+    "changelog",
+    "diff"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "swagger-changelog",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swimlane/swagger-changelog.git"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "tape src/tests/*.test.js | tap-spec"
+  },
+  "version": "1.1.0"
+}

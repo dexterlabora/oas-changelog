@@ -1,0 +1,17 @@
+{
+  "name": "swagger-changelog-utility",
+  "version": "1.0.0",
+  "description": "A simple utility to generate a changelog between two OAS files.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "type": "module",
+  "devDependencies": {
+    "swagger-changelog": "^1.1.0",
+    "openapi-diff": "^0.22.0"
+  }
+}

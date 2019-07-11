@@ -1,0 +1,563 @@
+- **Major**: `/networks/{networkId}/bluetoothClients/{id}` - Deleted
+- **Major**: `/networks/{networkId}/clients/{idOrMacOrIp}` - Deleted
+- **Major**: `/networks/{networkId}/clients/{idOrMacOrIp}/usageHistory` - Deleted
+- **Major**: `/networks/{networkId}/clients/{mac}/policy` - Deleted
+- **Major**: `/networks/{id}/clients/{mac}/splashAuthorizationStatus` - Deleted
+- **Major**: `/networks/{networkId}/clients/{idOrMacOrIp}/trafficHistory` - Deleted
+- **Major**: `/networks/{networkId}/clients/{idOrMacOrIp}/events` - Deleted
+- **Major**: `/networks/{networkId}/clients/{idOrMacOrIp}/latencyHistory` - Deleted
+- **Major**: `/organizations/{id}/snmp` - Deleted
+- **Major**: `/organizations/{id}/thirdPartyVPNPeers` - Deleted
+- **Major**: `/networks/{networkId}/pii/requests/{id}` - Deleted
+- **Major**: `/networks/{networkId}/sm/targetGroups` (get) - Param `withDetails` type turn from from `string` to `boolean`
+- **Major**: `/networks/{networkId}/sm/targetGroups/{targetGroupId}` (get) - Param `withDetails` type turn from from `string` to `boolean`
+- **Major**: `/networks/{network_id}/sm/devices` - Deleted
+- **Major**: `/networks/{network_id}/sm/users` - Deleted
+- **Major**: `/networks/{network_id}/sm/user/{id}/deviceProfiles` - Deleted
+- **Major**: `/networks/{network_id}/sm/{id}/deviceProfiles` - Deleted
+- **Major**: `/networks/{network_id}/sm/user/{id}/softwares` - Deleted
+- **Major**: `/networks/{network_id}/sm/{id}/softwares` - Deleted
+- **Major**: `/networks/{network_id}/sm/{id}/networkAdapters` - Deleted
+- **Major**: `/networks/{network_id}/sm/{id}/wlanLists` - Deleted
+- **Major**: `/networks/{network_id}/sm/{id}/securityCenters` - Deleted
+- **Major**: `/networks/{network_id}/sm/{id}/restrictions` - Deleted
+- **Major**: `/networks/{network_id}/sm/{id}/certs` - Deleted
+- **Major**: `/networks/{network_id}/sm/devices/tags` - Deleted
+- **Major**: `/networks/{network_id}/sm/device/fields` - Deleted
+- **Major**: `/networks/{network_id}/sm/device/wipe` - Deleted
+- **Major**: `/networks/{network_id}/sm/devices/checkin` - Deleted
+- **Major**: `/networks/{network_id}/sm/devices/move` - Deleted
+- **Major**: `/networks/{network_id}/sm/devices/{deviceId}/unenroll` - Deleted
+- **Major**: `/networks/{network_id}/sm/profiles` - Deleted
+- **Major**: `/networks/{network_id}/sm/{id}/cellularUsageHistory` - Deleted
+- **Major**: `/networks/{networkId}/syslogServers` (put) - Param `updateNetworkSyslogServers` became required
+- **Major**: `/networks/{networkId}/connectionStats` (get) - Param `ssid` type turn from from `string` to `integer`
+- **Major**: `/networks/{networkId}/connectionStats` (get) - Param `vlan` type turn from from `string` to `integer`
+- **Major**: `/networks/{networkId}/devices/connectionStats` (get) - Param `ssid` type turn from from `string` to `integer`
+- **Major**: `/networks/{networkId}/devices/connectionStats` (get) - Param `vlan` type turn from from `string` to `integer`
+- **Major**: `/networks/{networkId}/devices/{serial}/connectionStats` (get) - Param `ssid` type turn from from `string` to `integer`
+- **Major**: `/networks/{networkId}/devices/{serial}/connectionStats` (get) - Param `vlan` type turn from from `string` to `integer`
+- **Major**: `/networks/{networkId}/clients/connectionStats` (get) - Param `ssid` type turn from from `string` to `integer`
+- **Major**: `/networks/{networkId}/clients/connectionStats` (get) - Param `vlan` type turn from from `string` to `integer`
+- **Major**: `/networks/{networkId}/clients/{clientId}/connectionStats` (get) - Param `ssid` type turn from from `string` to `integer`
+- **Major**: `/networks/{networkId}/clients/{clientId}/connectionStats` (get) - Param `vlan` type turn from from `string` to `integer`
+- **Major**: `/networks/{networkId}/latencyStats` (get) - Param `ssid` type turn from from `string` to `integer`
+- **Major**: `/networks/{networkId}/latencyStats` (get) - Param `vlan` type turn from from `string` to `integer`
+- **Major**: `/networks/{networkId}/devices/latencyStats` (get) - Param `ssid` type turn from from `string` to `integer`
+- **Major**: `/networks/{networkId}/devices/latencyStats` (get) - Param `vlan` type turn from from `string` to `integer`
+- **Major**: `/networks/{networkId}/devices/{serial}/latencyStats` (get) - Param `ssid` type turn from from `string` to `integer`
+- **Major**: `/networks/{networkId}/devices/{serial}/latencyStats` (get) - Param `vlan` type turn from from `string` to `integer`
+- **Major**: `/networks/{networkId}/clients/latencyStats` (get) - Param `ssid` type turn from from `string` to `integer`
+- **Major**: `/networks/{networkId}/clients/latencyStats` (get) - Param `vlan` type turn from from `string` to `integer`
+- **Major**: `/networks/{networkId}/clients/{clientId}/latencyStats` (get) - Param `ssid` type turn from from `string` to `integer`
+- **Major**: `/networks/{networkId}/clients/{clientId}/latencyStats` (get) - Param `vlan` type turn from from `string` to `integer`
+- **Major**: `/networks/{networkId}/failedConnections` (get) - Param `ssid` type turn from from `string` to `integer`
+- **Major**: `/networks/{networkId}/failedConnections` (get) - Param `vlan` type turn from from `string` to `integer`
+- **Major**: `createOrganizationAdmins` - Deleted
+- **Major**: `definitions/DefaultDestinations` - Property `emails` type turn from `string` to `array`
+- **Major**: `definitions/DefaultDestinations` - Property `allAdmins` type turn from `string` to `boolean`
+- **Major**: `definitions/DefaultDestinations` - Property `snmp` type turn from `string` to `boolean`
+- **Major**: `definitions/Alert` - Property `enabled` type turn from `string` to `boolean`
+- **Major**: `definitions/Alert` - Property `alertDestinations` type turn from `string` to `object`
+- **Major**: `definitions/Alert` - Property `filters` type turn from `string` to `object`
+- **Major**: `createOrganizationNetworks` - Deleted
+- **Major**: `snapshotNetworkCamera` - Deleted
+- **Major**: `definitions/updateNetworkDevice` - Property `lat` type turn from `string` to `number`
+- **Major**: `definitions/updateNetworkDevice` - Property `lng` type turn from `string` to `number`
+- **Major**: `definitions/updateNetworkDevice` - Property `moveMapMarker` type turn from `string` to `boolean`
+- **Major**: `blinkLedsNetworkDevice` - Deleted
+- **Major**: `createNetworkGroupPolicies` - Deleted
+- **Major**: `createNetworkHttpServers` - Deleted
+- **Major**: `createNetworkHttpServersWebhookTests` - Deleted
+- **Major**: `createOrganizations` - Deleted
+- **Major**: `definitions/updateOrganizationSnmp` - Property `v2cEnabled` type turn from `string` to `boolean`
+- **Major**: `definitions/updateOrganizationSnmp` - Property `v3Enabled` type turn from `string` to `boolean`
+- **Major**: `definitions/updateOrganizationThirdPartyVPNPeers` - Required property `peers` Added
+- **Major**: `definitions/IpsecPolicies` - Property `ikeCipherAlgo` type turn from `string` to `array`
+- **Major**: `definitions/IpsecPolicies` - Property `ikeAuthAlgo` type turn from `string` to `array`
+- **Major**: `definitions/IpsecPolicies` - Property `ikeDiffieHellmanGroup` type turn from `string` to `array`
+- **Major**: `definitions/IpsecPolicies` - Property `ikeLifetime` type turn from `string` to `integer`
+- **Major**: `definitions/IpsecPolicies` - Property `childCipherAlgo` type turn from `string` to `array`
+- **Major**: `definitions/IpsecPolicies` - Property `childAuthAlgo` type turn from `string` to `array`
+- **Major**: `definitions/IpsecPolicies` - Property `childPfsGroup` type turn from `string` to `array`
+- **Major**: `definitions/IpsecPolicies` - Property `childLifetime` type turn from `string` to `integer`
+- **Major**: `createNetworkPiiRequests` - Deleted
+- **Major**: `createOrganizationSamlRoles` - Deleted
+- **Major**: `createNetworkSmTargetGroups` - Deleted
+- **Major**: `updateNetworkSmAppPolari` - Deleted
+- **Major**: `definitions/updateNetworkSmDevicesTags` - Property `tags` became required
+- **Major**: `definitions/updateNetworkSmDevicesTags` - Property `updateAction` became required
+- **Major**: `definitions/updateNetworkSmDeviceFields` - Property `deviceFields` became required
+- **Major**: `updateNetworkSmDevicesLock` - Deleted
+- **Major**: `updateNetworkSmDeviceWipe` - Deleted
+- **Major**: `updateNetworkSmDevicesCheckin` - Deleted
+- **Major**: `updateNetworkSmDevicesMove` - Deleted
+- **Major**: `definitions/updateNetworkSsidSplashSettings` - Property `useSplashUrl` type turn from `string` to `boolean`
+- **Major**: `definitions/updateNetworkSsid` - Property `enabled` type turn from `string` to `boolean`
+- **Major**: `definitions/updateNetworkSsid` - Property `radiusCoaEnabled` type turn from `string` to `boolean`
+- **Major**: `definitions/updateNetworkSsid` - Property `radiusAccountingEnabled` type turn from `string` to `boolean`
+- **Major**: `definitions/updateNetworkSsid` - Property `useVlanTagging` type turn from `string` to `boolean`
+- **Major**: `definitions/updateNetworkSsid` - Property `vlanId` type turn from `string` to `integer`
+- **Major**: `definitions/updateNetworkSsid` - Property `defaultVlanId` type turn from `string` to `integer`
+- **Major**: `definitions/updateNetworkSsid` - Property `walledGardenEnabled` type turn from `string` to `boolean`
+- **Major**: `definitions/updateNetworkSsid` - Property `minBitrate` type turn from `string` to `number`
+- **Major**: `definitions/updateNetworkSsid` - Property `perClientBandwidthLimitUp` type turn from `string` to `integer`
+- **Major**: `definitions/updateNetworkSsid` - Property `perClientBandwidthLimitDown` type turn from `string` to `integer`
+- **Major**: `definitions/RadiusServer` - Property `port` type turn from `string` to `integer`
+- **Major**: `definitions/RadiusAccountingServer` - Property `port` type turn from `string` to `integer`
+- **Major**: `definitions/ApTagsAndVlanId` - Property `vlanId` type turn from `string` to `integer`
+- **Major**: `definitions/updateNetworkSwitchSettings` - Property `useCombinedPower` type turn from `string` to `boolean`
+- **Major**: `definitions/PowerException` - Property `serial` became required
+- **Major**: `definitions/PowerException` - Property `powerType` became required
+- **Major**: `createNetworkSwitchStacks` - Deleted
+- **Major**: `definitions/updateNetworkSyslogServers` - Property `servers` became required
+- **Major**: `definitions/Server` - Property `host` became required
+- **Major**: `definitions/Server` - Property `port` type turn from `string` to `integer`
+- **Major**: `definitions/Server` - Property `port` became required
+- **Major**: `definitions/Server` - Property `roles` type turn from `string` to `array`
+- **Major**: `definitions/Server` - Property `roles` became required
+- **Major**: `definitions/updateNetworkContentFiltering` - Property `allowedUrlPatterns` type turn from `string` to `array`
+- **Major**: `definitions/updateNetworkContentFiltering` - Property `blockedUrlPatterns` type turn from `string` to `array`
+- **Major**: `definitions/updateNetworkContentFiltering` - Property `blockedUrlCategories` type turn from `string` to `array`
+- **Major**: `definitions/updateNetworkFirewalledService` - Property `allowedIps` type turn from `string` to `array`
+- **Major**: `definitions/Rule5` - Required property `vlanId` Added
+- **Major**: `definitions/Rule5` - Required property `services` Added
+- **Major**: `Rule6` - Deleted
+- **Major**: `definitions/Rule7` - Required property `definitions` Added
+- **Major**: `createNetworkStaticRoutes` - Deleted
+- **Major**: `BandwidthLimits2` - Deleted
+- **Major**: `createNetworkVlans` - Deleted
+- **Changes**: `/info/` : Description Updated
+- **Changes**: `/securityDefinitions/Cisco-Meraki-API-Key/` : Description Updated
+- **Changes**: `/paths//organizations/{organizationId}/admins/get/` : Description Updated
+- **Changes**: `/paths//organizations/{organizationId}/admins/post/` : Description Updated
+- **Changes**: `/organizations/{organizationId}/admins` (post) - Summary turned from `createOrganizationAdmins` to `createOrganizationAdmin`
+- **Changes**: `/paths//organizations/{organizationId}/admins/{id}/put/` : Description Updated
+- **Changes**: `/paths//organizations/{organizationId}/admins/{id}/delete/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/alertSettings/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/alertSettings/put/` : Description Updated
+- **Changes**: `/paths//devices/{serial}/camera/analytics/zones/get/` : Description Updated
+- **Changes**: `/paths//devices/{serial}/camera/analytics/recent/get/` : Description Updated
+- **Changes**: `/paths//devices/{serial}/camera/analytics/live/get/` : Description Updated
+- **Changes**: `/paths//devices/{serial}/camera/analytics/overview/get/` : Description Updated
+- **Changes**: `/paths//devices/{serial}/camera/analytics/zones/{zoneId}/history/get/` : Description Updated
+- **Changes**: `/paths//organizations/{organizationId}/apiRequests/get/` : Description Updated
+- **Changes**: `/organizations/{organizationId}/apiRequests` (get) - Optional param `responseCode` added
+- **Changes**: `/paths//networks/{networkId}/bluetoothClients/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/bluetoothSettings/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/bluetoothSettings/put/` : Description Updated
+- **Changes**: `/paths//organizations/{organizationId}/networks/get/` : Description Updated
+- **Changes**: `/paths//organizations/{organizationId}/networks/post/` : Description Updated
+- **Changes**: `/organizations/{organizationId}/networks` (post) - Summary turned from `createOrganizationNetworks` to `createOrganizationNetwork`
+- **Changes**: `/paths//networks/{networkId}/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/put/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/delete/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/bind/post/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/unbind/post/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/traffic/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/accessPolicies/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/airMarshal/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/siteToSiteVpn/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/siteToSiteVpn/put/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/cameras/{serial}/videoLink/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/cameras/{serial}/snapshot/post/` : Description Updated
+- **Changes**: `/networks/{networkId}/cameras/{serial}/snapshot` (post) - Summary turned from `snapshotNetworkCamera` to `generateNetworkCameraSnapshot`
+- **Changes**: `/networks/{networkId}/cameras/{serial}/snapshot` (post) - Param `snapshotNetworkCamera` deleted
+- **Changes**: `/networks/{networkId}/cameras/{serial}/snapshot` (post) - Optional param `generateNetworkCameraSnapshot` added
+- **Changes**: `/paths//networks/{networkId}/clients/provision/post/` : Description Updated
+- **Changes**: `/paths//devices/{serial}/clients/get/` : Description Updated
+- **Changes**: `/paths//organizations/{organizationId}/configTemplates/get/` : Description Updated
+- **Changes**: `/paths//organizations/{organizationId}/configTemplates/{id}/delete/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/devices/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/devices/{serial}/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/devices/{serial}/put/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/devices/{serial}/performance/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/devices/{serial}/uplink/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/devices/{serial}/lldp_cdp/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/devices/claim/post/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/devices/{serial}/remove/post/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/devices/{serial}/lossAndLatencyHistory/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/devices/{serial}/reboot/post/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/devices/{serial}/blinkLeds/post/` : Description Updated
+- **Changes**: `/networks/{networkId}/devices/{serial}/blinkLeds` (post) - Summary turned from `blinkLedsNetworkDevice` to `blinkNetworkDeviceLeds`
+- **Changes**: `/networks/{networkId}/devices/{serial}/blinkLeds` (post) - Param `blinkLedsNetworkDevice` deleted
+- **Changes**: `/networks/{networkId}/devices/{serial}/blinkLeds` (post) - Optional param `blinkNetworkDeviceLeds` added
+- **Changes**: `/paths//networks/{networkId}/cellularFirewallRules/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/cellularFirewallRules/put/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/l3FirewallRules/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/l3FirewallRules/put/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/l7FirewallRules/applicationCategories/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/l7FirewallRules/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/l7FirewallRules/put/` : Description Updated
+- **Changes**: `/paths//organizations/{organizationId}/vpnFirewallRules/get/` : Description Updated
+- **Changes**: `/paths//organizations/{organizationId}/vpnFirewallRules/put/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/ssids/{number}/l3FirewallRules/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/ssids/{number}/l3FirewallRules/put/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/groupPolicies/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/groupPolicies/post/` : Description Updated
+- **Changes**: `/networks/{networkId}/groupPolicies` (post) - Summary turned from `createNetworkGroupPolicies` to `createNetworkGroupPolicy`
+- **Changes**: `/paths//networks/{networkId}/groupPolicies/{groupPolicyId}/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/groupPolicies/{groupPolicyId}/put/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/groupPolicies/{groupPolicyId}/delete/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/httpServers/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/httpServers/post/` : Description Updated
+- **Changes**: `/networks/{networkId}/httpServers` (post) - Summary turned from `createNetworkHttpServers` to `createNetworkHttpServer`
+- **Changes**: `/paths//networks/{networkId}/httpServers/{id}/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/httpServers/{id}/put/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/httpServers/{id}/delete/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/httpServers/webhookTests/post/` : Description Updated
+- **Changes**: `/networks/{networkId}/httpServers/webhookTests` (post) - Summary turned from `createNetworkHttpServersWebhookTests` to `createNetworkHttpServersWebhookTest`
+- **Changes**: `/paths//networks/{networkId}/httpServers/webhookTests/{id}/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/merakiAuthUsers/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/merakiAuthUsers/{id}/get/` : Description Updated
+- **Changes**: `/paths//organizations/get/` : Description Updated
+- **Changes**: `/paths//organizations/post/` : Description Updated
+- **Changes**: `/organizations` (post) - Summary turned from `createOrganizations` to `createOrganization`
+- **Changes**: `/paths//organizations/{id}/get/` : Description Updated
+- **Changes**: `/paths//organizations/{id}/put/` : Description Updated
+- **Changes**: `/paths//organizations/{id}/clone/post/` : Description Updated
+- **Changes**: `/paths//organizations/{id}/licenseState/get/` : Description Updated
+- **Changes**: `/paths//organizations/{id}/inventory/get/` : Description Updated
+- **Changes**: `/paths//organizations/{id}/deviceStatuses/get/` : Description Updated
+- **Changes**: `/paths//organizations/{organizationId}/claim/post/` : Description Updated
+- **Changes**: `/paths//organizations/{organizationId}/uplinksLossAndLatency/get/` : Description Updated
+- **Changes**: `/organizations/{organizationId}/uplinksLossAndLatency` (get) - Optional param `t0` added
+- **Changes**: `/organizations/{organizationId}/uplinksLossAndLatency` (get) - Optional param `t1` added
+- **Changes**: `/organizations/{organizationId}/uplinksLossAndLatency` (get) - Optional param `timespan` added
+- **Changes**: `/paths//networks/{networkId}/pii/piiKeys/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/pii/smDevicesForKey/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/pii/smOwnersForKey/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/pii/requests/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/pii/requests/post/` : Description Updated
+- **Changes**: `/networks/{networkId}/pii/requests` (post) - Summary turned from `createNetworkPiiRequests` to `createNetworkPiiRequest`
+- **Changes**: `/paths//organizations/{organizationId}/samlRoles/get/` : Description Updated
+- **Changes**: `/paths//organizations/{organizationId}/samlRoles/post/` : Description Updated
+- **Changes**: `/organizations/{organizationId}/samlRoles` (post) - Summary turned from `createOrganizationSamlRoles` to `createOrganizationSamlRole`
+- **Changes**: `/paths//organizations/{organizationId}/samlRoles/{id}/get/` : Description Updated
+- **Changes**: `/paths//organizations/{organizationId}/samlRoles/{id}/put/` : Description Updated
+- **Changes**: `/paths//organizations/{organizationId}/samlRoles/{id}/delete/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/clients/{clientId}/securityEvents/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/clients/{clientId}/securityEvents/get/parameters/perPage/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/security/malwareSettings/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/security/malwareSettings/put/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/sm/targetGroups/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/sm/targetGroups/post/` : Description Updated
+- **Changes**: `/networks/{networkId}/sm/targetGroups` (post) - Summary turned from `createNetworkSmTargetGroups` to `createNetworkSmTargetGroup`
+- **Changes**: `/paths//networks/{networkId}/sm/targetGroups/{targetGroupId}/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/sm/targetGroups/{targetGroupId}/get/parameters/withDetails/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/sm/targetGroups/{targetGroupId}/put/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/sm/targetGroups/{targetGroupId}/delete/` : Description Updated
+- **Changes**: `/paths//networks/{network_id}/sm/profile/clarity/post/` : Description Updated
+- **Changes**: `/paths//networks/{network_id}/sm/profile/clarity/{profileId}/get/` : Description Updated
+- **Changes**: `/paths//networks/{network_id}/sm/profile/clarity/{profileId}/post/` : Description Updated
+- **Changes**: `/paths//networks/{network_id}/sm/profile/clarity/{profileId}/put/` : Description Updated
+- **Changes**: `/paths//networks/{network_id}/sm/profile/clarity/{profileId}/delete/` : Description Updated
+- **Changes**: `/paths//networks/{network_id}/sm/profile/umbrella/post/` : Description Updated
+- **Changes**: `/paths//networks/{network_id}/sm/profile/umbrella/{profileId}/get/` : Description Updated
+- **Changes**: `/paths//networks/{network_id}/sm/profile/umbrella/{profileId}/post/` : Description Updated
+- **Changes**: `/paths//networks/{network_id}/sm/profile/umbrella/{profileId}/put/` : Description Updated
+- **Changes**: `/paths//networks/{network_id}/sm/profile/umbrella/{profileId}/delete/` : Description Updated
+- **Changes**: `/paths//networks/{network_id}/sm/app/polaris/get/` : Description Updated
+- **Changes**: `/paths//networks/{network_id}/sm/app/polaris/post/` : Description Updated
+- **Changes**: `/paths//networks/{network_id}/sm/app/polaris/{appId}/put/` : Description Updated
+- **Changes**: `/networks/{network_id}/sm/app/polaris/{appId}` (put) - Summary turned from `updateNetworkSmAppPolari` to `updateNetworkSmAppPolaris`
+- **Changes**: `/paths//networks/{network_id}/sm/app/polaris/{appId}/delete/` : Description Updated
+- **Changes**: `/networks/{network_id}/sm/app/polaris/{appId}` (delete) - Summary turned from `deleteNetworkSmAppPolari` to `deleteNetworkSmAppPolaris`
+- **Changes**: `/paths//networks/{network_id}/sm/devices/lock/put/` : Description Updated
+- **Changes**: `/networks/{network_id}/sm/devices/lock` (put) - Summary turned from `updateNetworkSmDevicesLock` to `lockNetworkSmDevices`
+- **Changes**: `/networks/{network_id}/sm/devices/lock` (put) - Param `updateNetworkSmDevicesLock` deleted
+- **Changes**: `/networks/{network_id}/sm/devices/lock` (put) - Optional param `lockNetworkSmDevices` added
+- **Changes**: `/paths//networks/{network_id}/sm/{id}/performanceHistory/get/` : Description Updated
+- **Changes**: `/paths//networks/{network_id}/sm/{id}/desktopLogs/get/` : Description Updated
+- **Changes**: `/paths//networks/{network_id}/sm/{id}/deviceCommandLogs/get/` : Description Updated
+- **Changes**: `/paths//networks/{network_id}/sm/{id}/connectivity/get/` : Description Updated
+- **Changes**: `/paths//networks/{id}/splashLoginAttempts/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/ssids/{number}/splashSettings/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/ssids/{number}/splashSettings/put/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/ssids/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/ssids/{number}/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/ssids/{number}/put/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/switch/settings/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/switch/settings/put/` : Description Updated
+- **Changes**: `/paths//devices/{serial}/switchPorts/get/` : Description Updated
+- **Changes**: `/paths//devices/{serial}/switchPorts/{number}/get/` : Description Updated
+- **Changes**: `/paths//devices/{serial}/switchPorts/{number}/put/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/switchStacks/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/switchStacks/post/` : Description Updated
+- **Changes**: `/networks/{networkId}/switchStacks` (post) - Summary turned from `createNetworkSwitchStacks` to `createNetworkSwitchStack`
+- **Changes**: `/paths//networks/{networkId}/switchStacks/{switchStackId}/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/switchStacks/{switchStackId}/delete/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/switchStacks/{switchStackId}/add/post/` : Description Updated
+- **Changes**: `/paths//networks/{networkID}/switchStacks/{switchStackId}/remove/post/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/syslogServers/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/syslogServers/put/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/contentFiltering/categories/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/contentFiltering/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/contentFiltering/put/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/firewalledServices/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/firewalledServices/{service}/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/firewalledServices/{service}/put/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/oneToManyNatRules/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/oneToManyNatRules/put/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/oneToOneNatRules/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/oneToOneNatRules/put/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/portForwardingRules/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/portForwardingRules/put/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/staticRoutes/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/staticRoutes/post/` : Description Updated
+- **Changes**: `/networks/{networkId}/staticRoutes` (post) - Summary turned from `createNetworkStaticRoutes` to `createNetworkStaticRoute`
+- **Changes**: `/paths//networks/{networkId}/staticRoutes/{srId}/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/staticRoutes/{srId}/put/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/staticRoutes/{srId}/delete/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/uplinkSettings/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/uplinkSettings/put/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/vlans/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/vlans/post/` : Description Updated
+- **Changes**: `/networks/{networkId}/vlans` (post) - Summary turned from `createNetworkVlans` to `createNetworkVlan`
+- **Changes**: `/paths//networks/{networkId}/vlans/{vlanId}/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/vlans/{vlanId}/put/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/vlans/{vlanId}/delete/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/vlansEnabledState/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/vlansEnabledState/put/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/connectionStats/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/connectionStats/get/parameters/t0/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/connectionStats/get/parameters/t1/` : Description Updated
+- **Changes**: `/networks/{networkId}/connectionStats` (get) - Optional param `timespan` added
+- **Changes**: `/paths//networks/{networkId}/devices/connectionStats/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/devices/connectionStats/get/parameters/t0/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/devices/connectionStats/get/parameters/t1/` : Description Updated
+- **Changes**: `/networks/{networkId}/devices/connectionStats` (get) - Optional param `timespan` added
+- **Changes**: `/paths//networks/{networkId}/devices/{serial}/connectionStats/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/devices/{serial}/connectionStats/get/parameters/t0/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/devices/{serial}/connectionStats/get/parameters/t1/` : Description Updated
+- **Changes**: `/networks/{networkId}/devices/{serial}/connectionStats` (get) - Optional param `timespan` added
+- **Changes**: `/paths//networks/{networkId}/clients/connectionStats/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/clients/connectionStats/get/parameters/t0/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/clients/connectionStats/get/parameters/t1/` : Description Updated
+- **Changes**: `/networks/{networkId}/clients/connectionStats` (get) - Optional param `timespan` added
+- **Changes**: `/paths//networks/{networkId}/clients/{clientId}/connectionStats/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/clients/{clientId}/connectionStats/get/parameters/t0/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/clients/{clientId}/connectionStats/get/parameters/t1/` : Description Updated
+- **Changes**: `/networks/{networkId}/clients/{clientId}/connectionStats` (get) - Optional param `timespan` added
+- **Changes**: `/paths//networks/{networkId}/latencyStats/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/latencyStats/get/parameters/t0/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/latencyStats/get/parameters/t1/` : Description Updated
+- **Changes**: `/networks/{networkId}/latencyStats` (get) - Optional param `timespan` added
+- **Changes**: `/paths//networks/{networkId}/devices/latencyStats/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/devices/latencyStats/get/parameters/t0/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/devices/latencyStats/get/parameters/t1/` : Description Updated
+- **Changes**: `/networks/{networkId}/devices/latencyStats` (get) - Optional param `timespan` added
+- **Changes**: `/paths//networks/{networkId}/devices/{serial}/latencyStats/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/devices/{serial}/latencyStats/get/parameters/t0/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/devices/{serial}/latencyStats/get/parameters/t1/` : Description Updated
+- **Changes**: `/networks/{networkId}/devices/{serial}/latencyStats` (get) - Optional param `timespan` added
+- **Changes**: `/paths//networks/{networkId}/clients/latencyStats/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/clients/latencyStats/get/parameters/t0/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/clients/latencyStats/get/parameters/t1/` : Description Updated
+- **Changes**: `/networks/{networkId}/clients/latencyStats` (get) - Optional param `timespan` added
+- **Changes**: `/paths//networks/{networkId}/clients/{clientId}/latencyStats/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/clients/{clientId}/latencyStats/get/parameters/t0/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/clients/{clientId}/latencyStats/get/parameters/t1/` : Description Updated
+- **Changes**: `/networks/{networkId}/clients/{clientId}/latencyStats` (get) - Optional param `timespan` added
+- **Changes**: `/paths//networks/{networkId}/failedConnections/get/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/failedConnections/get/parameters/t0/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/failedConnections/get/parameters/t1/` : Description Updated
+- **Changes**: `/paths//networks/{networkId}/failedConnections/get/parameters/clientId/` : Description Updated
+- **Changes**: `/networks/{networkId}/failedConnections` (get) - Optional param `timespan` added
+- **Changes**: `/organizations/{organizationId}/actionBatches/{id}` - Added
+- **Changes**: `/organizations/{organizationId}/actionBatches` - Added
+- **Changes**: `/networks/{networkId}/bluetoothClients/{bluetoothClientId}` - Added
+- **Changes**: `/networks/{networkId}/split` - Added
+- **Changes**: `/organizations/{organizationId}/networks/combine` - Added
+- **Changes**: `/networks/{networkId}/clients/{clientId}/latencyHistory` - Added
+- **Changes**: `/networks/{networkId}/clients` - Added
+- **Changes**: `/networks/{networkId}/clients/{clientId}/splashAuthorizationStatus` - Added
+- **Changes**: `/networks/{networkId}/clients/{clientId}/policy` - Added
+- **Changes**: `/networks/{networkId}/clients/{clientId}/usageHistory` - Added
+- **Changes**: `/networks/{networkId}/clients/{clientId}/events` - Added
+- **Changes**: `/networks/{networkId}/clients/{clientId}/trafficHistory` - Added
+- **Changes**: `/networks/{networkId}/clients/{clientId}` - Added
+- **Changes**: `/organizations/{organizationId}/devices` - Added
+- **Changes**: `/networks/{networkId}/devices/{serial}/managementInterfaceSettings` - Added
+- **Changes**: `/networks/{networkId}/netflowSettings` - Added
+- **Changes**: `/organizations/{organizationId}/openapiSpec` - Added
+- **Changes**: `/organizations/{organizationId}/thirdPartyVPNPeers` - Added
+- **Changes**: `/networks/{networkId}/pii/requests/{requestId}` - Added
+- **Changes**: `/networks/{networkId}/wireless/rfProfiles` - Added
+- **Changes**: `/networks/{networkId}/devices/{serial}/wireless/radioSettings` - Added
+- **Changes**: `/organizations/{organizationId}/securityEvents` - Added
+- **Changes**: `/networks/{networkId}/securityEvents` - Added
+- **Changes**: `/organizations/{organizationId}/security/intrusionSettings` - Added
+- **Changes**: `/networks/{networkId}/security/intrusionSettings` - Added
+- **Changes**: `/networks/{networkId}/sm/{deviceId}/softwares` - Added
+- **Changes**: `/networks/{networkId}/sm/user/{userId}/softwares` - Added
+- **Changes**: `/networks/{networkId}/sm/{deviceId}/cellularUsageHistory` - Added
+- **Changes**: `/networks/{networkId}/sm/{deviceId}/certs` - Added
+- **Changes**: `/networks/{networkId}/sm/{deviceId}/restrictions` - Added
+- **Changes**: `/networks/{networkId}/sm/{deviceId}/securityCenters` - Added
+- **Changes**: `/networks/{networkId}/sm/{deviceId}/wlanLists` - Added
+- **Changes**: `/networks/{networkId}/sm/{deviceId}/networkAdapters` - Added
+- **Changes**: `/networks/{networkId}/sm/{deviceId}/deviceProfiles` - Added
+- **Changes**: `/networks/{networkId}/sm/user/{userId}/deviceProfiles` - Added
+- **Changes**: `/organizations/{organizationId}/snmp` - Added
+- **Changes**: `/networks/{networkId}/snmpSettings` - Added
+- **Changes**: `/organizations/{organizationId}/configTemplates/{configTemplateId}/switchProfiles` - Added
+- **Changes**: `/networks/{networkId}/ssids/{number}/trafficShaping` - Added
+- **Changes**: `/networks/{networkId}/trafficShaping` - Added
+- **Changes**: `/networks/{networkId}/trafficShaping/applicationCategories` - Added
+- **Changes**: `/networks/{networkId}/trafficShaping/dscpTaggingOptions` - Added
+- **Changes**: `/organizations/{organizationId}/webhookLogs` - Added
+- **Changes**: `definitions/updateNetworkClientPolicy` - Property `timespan` Deleted
+- **Changes**: `definitions/updateNetworkDevice` - Optional property `switchProfileId` Added
+- **Changes**: `/definitions/Rule/properties/policy/` : Description Updated
+- **Changes**: `/definitions/Rule3/properties/policy/` : Description Updated
+- **Changes**: `/definitions/Rule4/properties/policy/` : Description Updated
+- **Changes**: `/definitions/Scheduling/` : Description Updated
+- **Changes**: `/definitions/Bandwidth/` : Description Updated
+- **Changes**: `definitions/updateNetworkGroupPolicy` - Optional property `firewallAndTrafficShaping` Added
+- **Changes**: `definitions/updateNetworkGroupPolicy` - Optional property `splashAuthSettings` Added
+- **Changes**: `definitions/updateNetworkGroupPolicy` - Optional property `vlanTagging` Added
+- **Changes**: `definitions/updateNetworkGroupPolicy` - Optional property `bonjourForwarding` Added
+- **Changes**: `/definitions/updateOrganizationSnmp/properties/v2cEnabled/` : Description Updated
+- **Changes**: `/definitions/updateOrganizationSnmp/properties/v3Enabled/` : Description Updated
+- **Changes**: `/definitions/updateOrganizationSnmp/properties/v3AuthPass/` : Description Updated
+- **Changes**: `/definitions/updateOrganizationSnmp/properties/v3PrivPass/` : Description Updated
+- **Changes**: `definitions/updateOrganizationThirdPartyVPNPeers` - Property `name` Deleted
+- **Changes**: `definitions/updateOrganizationThirdPartyVPNPeers` - Property `publicIp` Deleted
+- **Changes**: `definitions/updateOrganizationThirdPartyVPNPeers` - Property `privateSubnets` Deleted
+- **Changes**: `definitions/updateOrganizationThirdPartyVPNPeers` - Property `ipsecPolicies` Deleted
+- **Changes**: `definitions/updateOrganizationThirdPartyVPNPeers` - Property `ipsecPoliciesPreset` Deleted
+- **Changes**: `definitions/updateOrganizationThirdPartyVPNPeers` - Property `secret` Deleted
+- **Changes**: `definitions/updateOrganizationThirdPartyVPNPeers` - Property `networkTags` Deleted
+- **Changes**: `/definitions/IpsecPolicies/properties/ikeCipherAlgo/` : Description Updated
+- **Changes**: `/definitions/IpsecPolicies/properties/ikeAuthAlgo/` : Description Updated
+- **Changes**: `/definitions/IpsecPolicies/properties/ikeDiffieHellmanGroup/` : Description Updated
+- **Changes**: `/definitions/IpsecPolicies/properties/childCipherAlgo/` : Description Updated
+- **Changes**: `/definitions/IpsecPolicies/properties/childAuthAlgo/` : Description Updated
+- **Changes**: `/definitions/IpsecPolicies/properties/childPfsGroup/` : Description Updated
+- **Changes**: `definitions/updateNetworkSecurityMalwareSettings` - Optional property `allowedUrls` Added
+- **Changes**: `definitions/updateNetworkSecurityMalwareSettings` - Optional property `allowedFiles` Added
+- **Changes**: `/definitions/updateNetworkSmTargetGroup/properties/scope/` : Description Updated
+- **Changes**: `/definitions/updateNetworkSsid/properties/minBitrate/` : Description Updated
+- **Changes**: `/definitions/updateNetworkSwitchSettings/properties/useCombinedPower/` : Description Updated
+- **Changes**: `definitions/Rule5` - Property `publicIp` Deleted
+- **Changes**: `definitions/Rule5` - Property `uplink` Deleted
+- **Changes**: `definitions/Rule5` - Property `portRules` Deleted
+- **Changes**: `definitions/Rule5` - Property `name` Deleted
+- **Changes**: `definitions/Rule5` - Property `protocol` Deleted
+- **Changes**: `definitions/Rule5` - Property `publicPort` Deleted
+- **Changes**: `definitions/Rule5` - Property `localIp` Deleted
+- **Changes**: `definitions/Rule5` - Property `localPort` Deleted
+- **Changes**: `definitions/Rule5` - Property `allowedIps` Deleted
+- **Changes**: `/definitions/Rule5/properties/ - Description added: `[object Object]`
+- **Changes**: `definitions/Rule7` - Property `name` Deleted
+- **Changes**: `definitions/Rule7` - Property `lanIp` Deleted
+- **Changes**: `definitions/Rule7` - Property `uplink` Deleted
+- **Changes**: `definitions/Rule7` - Property `publicPort` Deleted
+- **Changes**: `definitions/Rule7` - Property `localPort` Deleted
+- **Changes**: `definitions/Rule7` - Property `allowedIps` Deleted
+- **Changes**: `definitions/Rule7` - Property `protocol` Deleted
+- **Changes**: `definitions/Rule7` - Optional property `perClientBandwidthLimits` Added
+- **Changes**: `definitions/Rule7` - Optional property `dscpTagValue` Added
+- **Changes**: `definitions/Rule7` - Optional property `priority` Added
+- **Changes**: `Rule11` - Added
+- **Changes**: `Rule10` - Added
+- **Changes**: `Rule8` - Added
+- **Changes**: `updateNetworkSsidTrafficShaping` - Added
+- **Changes**: `IpAssignmentMode` - Added
+- **Changes**: `AuthMode` - Added
+- **Changes**: `moveNetworkSmDevices` - Added
+- **Changes**: `lockNetworkSmDevices` - Added
+- **Changes**: `combineOrganizationNetworks` - Added
+- **Changes**: `updateOrganizationActionBatch` - Added
+- **Changes**: `Action` - Added
+- **Changes**: `createOrganizationActionBatch` - Added
+- **Changes**: `createOrganizationAdmin` - Added
+- **Changes**: `Service` - Added
+- **Changes**: `createNetworkGroupPolicy` - Added
+- **Changes**: `blinkNetworkDeviceLeds` - Added
+- **Changes**: `updateNetworkSnmpSettings` - Added
+- **Changes**: `checkinNetworkSmDevices` - Added
+- **Changes**: `wipeNetworkSmDevice` - Added
+- **Changes**: `DeviceFields` - Added
+- **Changes**: `updateNetworkSmAppPolaris` - Added
+- **Changes**: `createNetworkSmTargetGroup` - Added
+- **Changes**: `AllowedFile` - Added
+- **Changes**: `WhitelistedRule` - Added
+- **Changes**: `ProtectedNetworks` - Added
+- **Changes**: `updateNetworkSecurityIntrusionSettings` - Added
+- **Changes**: `createOrganizationSamlRole` - Added
+- **Changes**: `Type5` - Added
+- **Changes**: `updateNetworkNetflowSettings` - Added
+- **Changes**: `WanEnabled` - Added
+- **Changes**: `updateNetworkDeviceManagementInterfaceSettings` - Added
+- **Changes**: `createNetworkHttpServer` - Added
+- **Changes**: `Settings3` - Added
+- **Changes**: `BonjourForwarding` - Added
+- **Changes**: `Settings2` - Added
+- **Changes**: `VlanTagging` - Added
+- **Changes**: `SplashAuthSettings` - Added
+- **Changes**: `L7FirewallRule` - Added
+- **Changes**: `BandwidthLimits1` - Added
+- **Changes**: `PerClientBandwidthLimits` - Added
+- **Changes**: `Definition` - Added
+- **Changes**: `Settings1` - Added
+- **Changes**: `FirewallAndTrafficShaping` - Added
+- **Changes**: `Settings` - Added
+- **Changes**: `createNetworkVlan` - Added
+- **Changes**: `BandwidthLimits6` - Added
+- **Changes**: `createNetworkStaticRoute` - Added
+- **Changes**: `updateNetworkTrafficShaping` - Added
+- **Changes**: `createNetworkSwitchStack` - Added
+- **Changes**: `PowerType` - Added
+- **Changes**: `BandSelection` - Added
+- **Changes**: `RadiusLoadBalancingPolicy` - Added
+- **Changes**: `RadiusFailoverPolicy` - Added
+- **Changes**: `WpaEncryptionMode` - Added
+- **Changes**: `EncryptionMode` - Added
+- **Changes**: `V3PrivMode` - Added
+- **Changes**: `V3AuthMode` - Added
+- **Changes**: `User` - Added
+- **Changes**: `Access` - Added
+- **Changes**: `generateNetworkCameraSnapshot` - Added
+- **Changes**: `AllowedUrl` - Added
+- **Changes**: `updateOrganizationSecurityIntrusionSettings` - Added
+- **Changes**: `updateNetworkDeviceWirelessRadioSettings` - Added
+- **Changes**: `Rule9` - Added
+- **Changes**: `SplashPage` - Added
+- **Changes**: `createNetworkPiiRequest` - Added
+- **Changes**: `Peer` - Added
+- **Changes**: `Wan2` - Added
+- **Changes**: `Wan1` - Added
+- **Changes**: `Type2` - Added
+- **Changes**: `L3FirewallRule` - Added
+- **Changes**: `Type1` - Added
+- **Changes**: `TrafficShapingRule` - Added
+- **Changes**: `Type` - Added
+- **Changes**: `createOrganization` - Added
+- **Changes**: `createNetworkHttpServersWebhookTest` - Added
+- **Changes**: `Policy1` - Added
+- **Changes**: `Policy` - Added
+- **Changes**: `createOrganizationNetwork` - Added
+- **Renamed**: Path ``/networks/{network_id}/sm/devices`` renamed to `/networks/{networkId}/sm/devices`
+- **Renamed**: Path ``/networks/{network_id}/sm/users`` renamed to `/networks/{networkId}/sm/users`
+- **Renamed**: Path ``/networks/{network_id}/sm/devices/tags`` renamed to `/networks/{networkId}/sm/devices/tags`
+- **Renamed**: Path ``/networks/{network_id}/sm/device/fields`` renamed to `/networks/{networkId}/sm/device/fields`
+- **Renamed**: Path ``/networks/{network_id}/sm/device/wipe`` renamed to `/networks/{networkId}/sm/device/wipe`
+- **Renamed**: Path ``/networks/{network_id}/sm/devices/checkin`` renamed to `/networks/{networkId}/sm/devices/checkin`
+- **Renamed**: Path ``/networks/{network_id}/sm/devices/move`` renamed to `/networks/{networkId}/sm/devices/move`
+- **Renamed**: Path ``/networks/{network_id}/sm/devices/{deviceId}/unenroll`` renamed to `/networks/{networkId}/sm/devices/{deviceId}/unenroll`
+- **Renamed**: Path ``/networks/{network_id}/sm/profiles`` renamed to `/networks/{networkId}/sm/profiles`
+- **Renamed**: `/organizations/{organizationId}/admins` (*post*) - Param `createOrganizationAdmins` renamed to `createOrganizationAdmin`
+- **Renamed**: `/organizations/{organizationId}/networks` (*post*) - Param `createOrganizationNetworks` renamed to `createOrganizationNetwork`
+- **Renamed**: `/networks/{networkId}/groupPolicies` (*post*) - Param `createNetworkGroupPolicies` renamed to `createNetworkGroupPolicy`
+- **Renamed**: `/networks/{networkId}/httpServers` (*post*) - Param `createNetworkHttpServers` renamed to `createNetworkHttpServer`
+- **Renamed**: `/networks/{networkId}/httpServers/webhookTests` (*post*) - Param `createNetworkHttpServersWebhookTests` renamed to `createNetworkHttpServersWebhookTest`
+- **Renamed**: `/organizations` (*post*) - Param `createOrganizations` renamed to `createOrganization`
+- **Renamed**: `/networks/{networkId}/pii/requests` (*post*) - Param `createNetworkPiiRequests` renamed to `createNetworkPiiRequest`
+- **Renamed**: `/organizations/{organizationId}/samlRoles` (*post*) - Param `createOrganizationSamlRoles` renamed to `createOrganizationSamlRole`
+- **Renamed**: `/networks/{networkId}/sm/targetGroups` (*post*) - Param `createNetworkSmTargetGroups` renamed to `createNetworkSmTargetGroup`
+- **Renamed**: `/networks/{network_id}/sm/app/polaris/{appId}` (*put*) - Param `updateNetworkSmAppPolari` renamed to `updateNetworkSmAppPolaris`
+- **Renamed**: `/networks/{networkId}/switchStacks` (*post*) - Param `createNetworkSwitchStacks` renamed to `createNetworkSwitchStack`
+- **Renamed**: `/networks/{networkId}/staticRoutes` (*post*) - Param `createNetworkStaticRoutes` renamed to `createNetworkStaticRoute`
+- **Renamed**: `/networks/{networkId}/vlans` (*post*) - Param `createNetworkVlans` renamed to `createNetworkVlan`
