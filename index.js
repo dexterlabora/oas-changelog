@@ -1,8 +1,24 @@
+/*
+ * $ node index.js -o "./oas-files/Meraki Dashboard API-Swagger20-v0.json" -n "./oas-files/Meraki Dashboard API-Swagger20-v0.1.json"
+ */
+
+var program = require("commander");
+program
+  .option("-o, --oldSpec <oldSpec>", "The Meraki API Key")
+  .option("-n, --newSpec <newSpec>", "The organization ID")
+  .parse(process.argv);
+if (!program.oldSpec || !program.newSpec) {
+  console.log("missing required inputs");
+  return;
+}
+
+/******* */
+
 const changelog = require("./swagger-changelog-merakified").changelog;
 const fs = require("fs");
 
-const oldSpec = "./oas-files/Meraki Dashboard API-Swagger20-v0.json";
-const newSpec = "./oas-files/Meraki Dashboard API-Swagger20-v0.1.json";
+const oldSpec = program.oldSpec || "";
+const newSpec = program.newSpec || "";
 
 var config = {
   changes: {
@@ -20,6 +36,7 @@ var config = {
     }
   }
 };
+
 changelog(oldSpec, newSpec, config).then(log => {
   //console.log("log", log);
   //console.log("log.items", log.items);

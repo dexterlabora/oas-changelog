@@ -8,7 +8,9 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "commander": "^2.20.0"
+  },
   "type": "module",
   "devDependencies": {
     "swagger-changelog": "^1.1.0",
