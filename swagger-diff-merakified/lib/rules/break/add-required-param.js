@@ -22,6 +22,7 @@ function addRequiredParam(_ref) {
     var paramName = path[4];
     return {
       message: `\`${pathId}\` \`${method}\` - Required param \`${paramName}\` Added`,
+      messageHtml: `<strong>Required param</strong> <span><code>${paramName}</code> Added</span>`,
       path: pathId,
       method: method,
       param: paramName

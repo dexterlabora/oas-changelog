@@ -212,14 +212,20 @@ function detectRenames(diff, config) {
 function buildChangelog(diff) {
   const retVal = {
     paragraph: "",
-    items: [],
+    messages: [],
     diff: diff,
     unmatched: []
   };
+
   /**
    * Set messages for each item
    */
-  const items = diff.reduce((res, item) => {
+  diff = diff.map(d => {
+    d.name = TYPE_MAP[d.type].name;
+    return d;
+  });
+
+  const messages = diff.reduce((res, item) => {
     if (item.ruleId == "edit-description") {
       res.push(
         `- **${TYPE_MAP[item.type].name}**: \`${
@@ -229,17 +235,21 @@ function buildChangelog(diff) {
     } else if (item.type == "unmatchDiffs") {
       return res;
     } else {
-      res.push(`- **${TYPE_MAP[item.type].name}**: ${item.message}`);
+      if (item.messageHtml) {
+        res.push(item.messageHtml);
+      } else {
+        res.push(`- **${TYPE_MAP[item.type].name}**: ${item.message}`);
+      }
     }
 
     return res;
   }, []);
 
   // Array of messages
-  retVal.items = retVal.items.concat(items);
+  retVal.messages = retVal.messages.concat(messages);
 
   // One string of all messages
-  retVal.paragraph = retVal.items.join("\n");
+  retVal.paragraph = retVal.messages.join("\n");
   return retVal;
 }
 

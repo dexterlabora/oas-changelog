@@ -1,0 +1,81 @@
+<h1>Dashboard API Changelog</h1>
+
+<h2>Version</h2>
+
+<h2>What's new?</h2>
+From {{oldSpec.info.version}} to {{newSpec.info.version}}
+
+<h3>Major</h3>
+<ul>
+    {{#each diff}}
+    {{#ifEquals this.name "Major"}}
+    <li>
+        <h4>{{toUpperCase this.method}} <code>{{this.path}}</code></h4>
+        {{#if this.apiDetails.tags}}
+        <strong>{{this.apiDetails.tags}}<i> - {{this.apiDetails.summary}}</i></strong>
+        {{/if}}
+        <p>
+            {{{this.messageHtml}}}
+        </p>
+    </li>
+    {{/ifEquals}}
+    {{/each}}
+</ul>
+
+<h3>Breaking</h3>
+<ul>
+    {{#each diff}}
+    {{#ifEquals this.name "Breaking"}}
+    <li>
+        <h4>{{toUpperCase this.method}} <code>{{this.path}}</code></h4>
+        {{#if this.apiDetails.tags}}
+        <strong>{{this.apiDetails.tags}}<i> - {{this.apiDetails.summary}}</i></strong>
+        {{/if}}
+        <p>
+            {{{this.messageHtml}}}
+        </p>
+    </li>
+    {{/ifEquals}}
+    {{/each}}
+</ul>
+
+<h3>Renamed</h3>
+<ul>
+    {{#each diff}}
+    {{#ifEquals this.name "Renamed"}}
+    <li>
+        <h4>{{toUpperCase this.method}} <code>{{this.path}}</code></h4>
+        {{#if this.apiDetails.tags}}
+        <strong>{{this.apiDetails.tags}}<i> - {{this.apiDetails.summary}}</i></strong>
+        {{/if}}
+        <p>
+            {{{this.messageHtml}}}
+        </p>
+    </li>
+    {{/ifEquals}}
+    {{/each}}
+</ul>
+
+<h3>Changes</h3>
+<ul>
+    {{#each diff}}
+    {{#ifEquals this.name "Changes"}}
+    <li>
+        <h4>{{this.apiDetails.summary}}</h4>
+        <strong>{{toUpperCase this.method}} </strong>
+        <span> <code>{{this.path}}</code></span>
+        <br>
+        {{{this.messageHtml}}}
+    </li>
+    {{/ifEquals}}
+    {{/each}}
+</ul>
+
+
+
+<hr>
+ToDo
+
+name: "Unmatched"
+
+name: "UnmatchDiffs"

@@ -21,6 +21,7 @@ function deleteParam(_ref) {
     var paramName = path[4];
     return {
       message: `\`${pathId}\` (${method}) - Param \`${paramName}\` deleted`,
+      messageHtml: `Param <code>${paramName}</code> Deleted`,
       path: pathId,
       method: method,
       param: paramName

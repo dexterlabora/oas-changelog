@@ -16,6 +16,7 @@ function editDescription(_ref) {
     var p = "/" + path.slice(0, -1).join("/") + "/";
     return {
       message: `\`${p} - Description added: \`${rhs}\``,
+      messageHtml: `Description added: <code>${rhs}</code>`,
       descriptionPath: p,
       description: rhs
     };

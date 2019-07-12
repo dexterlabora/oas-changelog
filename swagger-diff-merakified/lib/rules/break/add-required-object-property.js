@@ -20,6 +20,7 @@ function addRequiredObjectProperty(_ref) {
     var propertyName = path[path.length - 1];
     return {
       message: `\`${objectPath}\` - Required property \`${propertyName}\` Added`,
+      messageHtml: `<strong>Required property</strong> <span><code>${propertyName}</code> Added</span>`,
       path: objectPath,
       property: propertyName
     };

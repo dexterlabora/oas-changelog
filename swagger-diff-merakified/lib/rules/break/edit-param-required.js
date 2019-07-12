@@ -23,6 +23,7 @@ function editParamRequired(_ref) {
     var paramName = path[4];
     return {
       message: `\`${pathId}\` (${method}) - Param \`${paramName}\` became required`,
+      messageHtml: `Param <code>${paramName}</code> became required`,
       path: pathId,
       method: method,
       param: paramName

@@ -20,6 +20,7 @@ function deleteOperationId(_ref) {
     var method = path[2];
     return {
       message: `\`${pathId}\` (${method}) - OperationId (\`${lhs}\`) Deleted`,
+      messageHtml: `OperationId <code>${lhs}</code> Deleted`,
       path: pathId,
       method: method,
       operationId: lhs

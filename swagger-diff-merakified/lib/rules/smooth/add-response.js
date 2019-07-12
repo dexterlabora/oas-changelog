@@ -32,6 +32,8 @@ function addResponse(_ref) {
     return {
       message: `\`${pathId}\` (${method}) - Response \`${responseId}\` added to (\`${definition ||
         rhs}\`)`,
+      messageHtml: `Response <code>${responseId}</code> added to (<code>${definition ||
+        rhs}</code>)`,
       path: pathId,
       method: method,
       responseId: responseId

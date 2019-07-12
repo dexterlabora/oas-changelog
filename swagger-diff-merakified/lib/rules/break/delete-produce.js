@@ -21,6 +21,7 @@ function deleteProduce(_ref) {
     var method = path[2];
     return {
       message: `\`${pathId}\` ('${method}) - Produces \`${item.lhs}\` Deleted`,
+      messageHtml: `Produces <code>${item.lhs}</code> Deleted`,
       path: pathId,
       method: method,
       produce: item.lhs

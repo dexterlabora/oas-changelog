@@ -23,6 +23,7 @@ function editResponse(_ref) {
     var responseId = path[4];
     return {
       message: `\`${pathId}\` (${method}) - Response \`${responseId}\` turned from \`${lhs}\` to \`${rhs}\``,
+      messageHtml: `Response <code>${responseId}</code> turned from <code>${lhs}</code> to <code>${rhs}</code>`,
       path: pathId,
       method: method,
       responseId: responseId,

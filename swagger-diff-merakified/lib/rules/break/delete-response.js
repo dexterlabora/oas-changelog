@@ -21,6 +21,7 @@ function deleteResponse(_ref) {
     var responseId = path[4];
     return {
       message: `\`${pathId}\` (${method}) - Response ${responseId} deleted`,
+      messageHtml: `Response <code>${responseId}</code> Deleted`,
       path: pathId,
       reponseId: responseId,
       method: method

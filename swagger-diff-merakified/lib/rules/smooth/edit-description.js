@@ -16,6 +16,7 @@ function editDescription(_ref) {
     var p = "/" + path.slice(0, -1).join("/") + "/";
     return {
       message: `\`${p}\` - Description turned from \`${lhs}\` to \`${rhs}\``,
+      messageHtml: `Description turned from <code>${lhs}</code> to <code>${rhs}</code>`,
       descriptionPath: p,
       previousDescription: lhs,
       currentDescription: rhs

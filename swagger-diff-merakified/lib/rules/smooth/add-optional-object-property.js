@@ -20,6 +20,7 @@ function addOptionalObjectProperty(_ref) {
     var propertyName = path[path.length - 1];
     return {
       message: `\`${objectPath}\` - Optional property \`${propertyName}\` Added`,
+      messageHtml: `Optional property <code>${propertyName}</code> Added`,
       path: objectPath,
       property: propertyName
     };

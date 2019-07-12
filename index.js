@@ -2,7 +2,8 @@
  * $ node index.js -o "./oas-files/Meraki Dashboard API-Swagger20-v0.json" -n "./oas-files/Meraki Dashboard API-Swagger20-v0.1.json"
  */
 
-var program = require("commander");
+const program = require("commander");
+
 program
   .option("-o, --oldSpec <oldSpec>", "The Meraki API Key")
   .option("-n, --newSpec <newSpec>", "The organization ID")
@@ -17,8 +18,15 @@ if (!program.oldSpec || !program.newSpec) {
 const changelog = require("./swagger-changelog-merakified").changelog;
 const fs = require("fs");
 
+const SwaggerParser = require("swagger-parser");
+const hbs = require("handlebars");
+
 const oldSpec = program.oldSpec || "";
 const newSpec = program.newSpec || "";
+
+const templateFile = fs.readFileSync("template.hbs", "utf8");
+const oldSpecFile = JSON.parse(fs.readFileSync(oldSpec, "utf8"));
+const newSpecFile = JSON.parse(fs.readFileSync(newSpec, "utf8"));
 
 var config = {
   changes: {
@@ -41,13 +49,84 @@ changelog(oldSpec, newSpec, config).then(log => {
   //console.log("log", log);
   //console.log("log.items", log.items);
 
-  //console.log("log.diff", JSON.stringify(log.diff));
+  mergeSpecWithChanges(log.diff, newSpec).then(res => {
+    //console.log("log.diff", JSON.stringify(log.diff));
+    //console.log("res", res);
+    writeJsonFile(res);
+
+    writeWeb(res);
+  });
+  writeMarkdownFile(log.paragraph);
+});
+
+function writeMarkdownFile(data) {
+  //console.log(log.paragraph);
+  fs.writeFileSync("./output/changelog.md", data, "utf-8");
+}
+
+function writeJsonFile(data) {
   fs.writeFileSync(
     "./output/changelog.json",
-    JSON.stringify(log.diff, null, 2),
+    JSON.stringify(data, null, 2),
     "utf-8"
   );
+}
 
-  console.log(log.paragraph);
-  fs.writeFileSync("./output/changelog.md", log.paragraph, "utf-8");
-});
+function writeWeb(data) {
+  hbs.registerHelper("ifEquals", function(arg1, arg2, options) {
+    return arg1 == arg2 ? options.fn(this) : options.inverse(this);
+  });
+
+  hbs.registerHelper("toUpperCase", function(str) {
+    if (!str) {
+      return;
+    }
+    return str.toUpperCase();
+  });
+  var template = hbs.compile(templateFile);
+  webData = {};
+  webData.newSpec = newSpecFile;
+  webData.oldSpec = oldSpecFile;
+  webData.diff = data;
+
+  var webPage = template(webData);
+  //console.log("old version:", webData.oldSpec.info.version);
+  fs.writeFileSync("./output/changelog.html", webPage, "utf-8");
+}
+
+async function mergeSpecWithChanges(diff, specPath) {
+  //const spec = await fs.readFileSync(specPath, "utf8");
+
+  const parsed = await SwaggerParser.parse(specPath)
+    .then(r => {
+      //console.log("r", r);
+      return r;
+    })
+    .catch(e => console.log("SwaggerParser error ", e));
+  // const paths = parsed.paths;
+
+  //console.log("parsed", parsed);
+  const paths = parsed.paths;
+  //console.log("paths", paths);
+
+  diff = diff.map(d => {
+    pathDetails = paths[d.path];
+    //console.log("pathDetails", pathDetails);
+    if (pathDetails) {
+      if (d.method) {
+        if (Object.keys(pathDetails).includes(d.method)) {
+          d.apiDetails = pathDetails[d.method];
+        }
+      } else {
+        d.apiDetails = pathDetails;
+      }
+
+      return d;
+    } else {
+      return d;
+    }
+  });
+
+  //console.log("diff", diff);
+  return diff;
+}

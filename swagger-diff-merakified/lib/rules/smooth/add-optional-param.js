@@ -22,6 +22,7 @@ function addOptionalParam(_ref) {
     var paramName = path[4];
     return {
       message: `\`${pathId}\` (${method}) - Optional param \`${paramName}\` added`,
+      messageHtml: `Optional param <code>${paramName}</code> added`,
       path: pathId,
       method: method,
       param: paramName

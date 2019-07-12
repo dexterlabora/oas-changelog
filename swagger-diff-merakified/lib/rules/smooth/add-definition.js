@@ -15,6 +15,7 @@ function addDefinition(_ref) {
     var pathId = path[1];
     return {
       message: `\`${pathId}\` - Added`,
+      messageHtml: `Added`,
       path: pathId
     };
   }

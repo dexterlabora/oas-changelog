@@ -20,6 +20,7 @@ function editObjectPropertyType(_ref) {
     var propertyName = path[path.length - 2];
     return {
       message: `\`${objectPath}\` - Property \`${propertyName}\` type turn from \`${lhs}\` to \`${rhs}\``,
+      messageHtml: `<code>${objectPath}</code> - Property <code>${propertyName}</code> type turn from <code>${lhs}</code> to <code>${rhs}</code>`,
       path: objectPath,
       Property: propertyName,
       previousType: lhs,

@@ -22,6 +22,7 @@ function editParamIn(_ref) {
     var paramName = path[4];
     return {
       message: `\`${pathId}\` (${method}) - Param \`${paramName}\` in turn from \`${lhs}\` to \`${rhs}\``,
+      messageHtml: `Param <code>${paramName}</code> in turn from <code>${lhs}</code> to <code>${rhs}</code>`,
       path: pathId,
       method: method,
       param: paramName,

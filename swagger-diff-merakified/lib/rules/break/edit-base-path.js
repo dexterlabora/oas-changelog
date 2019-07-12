@@ -14,6 +14,7 @@ function editBasePath(_ref) {
   if (match) {
     return {
       message: `Base path turned from  \`${lhs}\` to \`${rhs}\``,
+      messageHtml: `Base path turned from <code>${lhs}</code> to <code>${rhs}</code>`,
       previousBasePath: lhs,
       currentBasePath: rhs
     };

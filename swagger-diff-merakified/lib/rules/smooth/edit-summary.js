@@ -20,6 +20,7 @@ function editSummary(_ref) {
     var method = path[2];
     return {
       message: `\`${pathId}\` (${method}) - Summary turned from \`${lhs}\` to \`${rhs}\``,
+      messageHtml: `Summary changed from <code>${lhs}</code> to <code>${rhs}</code>`,
       method: method,
       previousSummary: lhs,
       currentSummary: rhs

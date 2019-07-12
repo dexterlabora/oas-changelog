@@ -17,6 +17,7 @@ function deleteObjectProperty(_ref) {
     var propertyName = path[path.length - 1];
     return {
       message: `\`${objectPath}\` - Property \`${propertyName}\` Deleted`,
+      messageHtml: `Property <code>${propertyName}</code> Deleted`,
       path: objectPath,
       property: propertyName
     };

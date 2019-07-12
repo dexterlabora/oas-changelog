@@ -16,6 +16,7 @@ function addMethod(_ref) {
     var method = path[2];
     return {
       message: `\`${pathId}\` (${method}) - Method added`,
+      messageHtml: `Method added`,
       path: pathId,
       method: method
     };

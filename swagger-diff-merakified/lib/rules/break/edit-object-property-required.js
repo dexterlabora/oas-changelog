@@ -21,6 +21,7 @@ function editObjectPropertyRequired(_ref) {
     var propertyName = path[path.length - 2];
     return {
       message: `\`${objectPath}\` - Property \`${propertyName}\` became required`,
+      messageHtml: `<code>${objectPath}</code> - Property <code>${propertyName}</code> became required`,
       path: objectPath,
       property: propertyName
     };

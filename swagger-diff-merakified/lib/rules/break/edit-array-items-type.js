@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -10,11 +10,17 @@ function editArrayItemsType(_ref) {
   var lhs = _ref.lhs;
   var rhs = _ref.rhs;
 
-  var match = kind === 'E' && path.length >= 2 && path[path.length - 2] === 'items' && path[path.length - 1] === 'type';
+  var match =
+    kind === "E" &&
+    path.length >= 2 &&
+    path[path.length - 2] === "items" &&
+    path[path.length - 1] === "type";
   if (match) {
-    var arrayPath = path.slice(0, -2).join('/');
+    var arrayPath = path.slice(0, -2).join("/");
     return {
-      message: arrayPath + ' - Array items type turn from ' + lhs + ' to ' + rhs,
+      message:
+        arrayPath + " - Array items type turn from " + lhs + " to " + rhs,
+      messageHtml: `<code>${arrayPath}</code> - Array items type turn from <code>${lhs}</code> to <code>$s{rhs}</code>`,
       path: arrayPath,
       previousType: lhs,
       currentType: rhs
@@ -22,4 +28,4 @@ function editArrayItemsType(_ref) {
   }
   return false;
 }
-module.exports = exports['default'];
+module.exports = exports["default"];

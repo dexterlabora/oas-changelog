@@ -14,6 +14,7 @@ function editHost(_ref) {
   if (match) {
     return {
       message: `Host turned from \`${lhs}\` to \`${rhs}\``,
+      messageHtml: `Host turned from <code>${lhs}</code> to <code>${rhs}</code>`,
       previousHost: lhs,
       currentHost: rhs
     };

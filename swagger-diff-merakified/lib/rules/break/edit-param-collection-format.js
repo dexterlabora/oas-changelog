@@ -25,6 +25,8 @@ function editParamCollectionFormat(_ref) {
     return {
       message: `\`${pathId}\` (${method}) - Param \`${paramName}\` collection format turn from (${lhs ||
         "(none)"}) to (${rhs || "(none)"})`,
+      messageHtml: `Param <code>${paramName}</code> collection format turn from (<code>${lhs ||
+        "(none)"}</code>) to (<code>${rhs || "(none)"}</code>)`,
       path: pathId,
       method: method,
       param: paramName,

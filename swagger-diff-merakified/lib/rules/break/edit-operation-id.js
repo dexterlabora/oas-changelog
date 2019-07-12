@@ -20,6 +20,7 @@ function editOperationId(_ref) {
     var method = path[2];
     return {
       message: `\`${pathId}\` (${method}) - OperationId turned from \`${lhs}\` to \`${rhs}\``,
+      messageHtml: `OperationId turned from <code>${lhs}</code> to <code>${rhs}</code>`,
       path: pathId,
       method: method,
       previousOperationId: lhs,

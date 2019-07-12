@@ -21,7 +21,8 @@ function editParamType(_ref) {
     var method = path[2];
     var paramName = path[4];
     return {
-      message: `\`${pathId}\` (${method}) - Param \`${paramName}\` type turn from from \`${lhs}\` to \`${rhs}\``,
+      message: `\`${pathId}\` (${method}) - Param \`${paramName}\` type turn from \`${lhs}\` to \`${rhs}\``,
+      messageHtml: `Param <code>${paramName}</code> type turn from <code>${lhs}</code> to <code>${rhs}</code>`,
       path: pathId,
       method: method,
       param: paramName,
