@@ -20,6 +20,7 @@ const fs = require("fs");
 
 const SwaggerParser = require("swagger-parser");
 const hbs = require("handlebars");
+var pug = require('pug');
 
 const oldSpec = program.oldSpec || "";
 const newSpec = program.newSpec || "";
@@ -32,7 +33,7 @@ var config = {
   changes: {
     breaks: {
       major: 2,
-      minor: 3,
+      minor: 2,
       patch: 3,
       unchanged: 0
     },
@@ -49,14 +50,27 @@ changelog(oldSpec, newSpec, config).then(log => {
   //console.log("log", log);
   //console.log("log.items", log.items);
 
+  writeMarkdownFile(log.paragraph);
+
   mergeSpecWithChanges(log.diff, newSpec).then(res => {
     //console.log("log.diff", JSON.stringify(log.diff));
     //console.log("res", res);
-    writeJsonFile(res);
 
-    writeWeb(res);
+    // Add extra context data
+    const diff = res;
+    context = {};
+    context.newSpec = newSpecFile;
+    context.oldSpec = oldSpecFile;
+    context.uniqueNames = [...new Set(diff.map(item => item.name))];
+    context.uniqueGroups = [...new Set(diff.map(item => item.group))];
+    
+    context.uniqueMethods = [...new Set(diff.map(item => item.method))];
+    context.diff = diff;
+
+    writeJsonFile(context);
+    //writeHbsWeb(context);
+    writePugWeb(context);
   });
-  writeMarkdownFile(log.paragraph);
 });
 
 function writeMarkdownFile(data) {
@@ -72,8 +86,19 @@ function writeJsonFile(data) {
   );
 }
 
-function writeWeb(data) {
+function writePugWeb(data){
+  
+  // renderFile
+  var html = pug.renderFile('index.pug', data);
+  fs.writeFileSync("./output/web/changelog.html", html, "utf-8");
+}
+
+function writeHbsWeb(data) {
   hbs.registerHelper("ifEquals", function(arg1, arg2, options) {
+    return arg1 == arg2 ? options.fn(this) : options.inverse(this);
+  });
+
+  hbs.registerHelper("ifNotEqual", function(arg1, arg2, options) {
     return arg1 == arg2 ? options.fn(this) : options.inverse(this);
   });
 
@@ -84,12 +109,8 @@ function writeWeb(data) {
     return str.toUpperCase();
   });
   var template = hbs.compile(templateFile);
-  webData = {};
-  webData.newSpec = newSpecFile;
-  webData.oldSpec = oldSpecFile;
-  webData.diff = data;
 
-  var webPage = template(webData);
+  var webPage = template(data);
   //console.log("old version:", webData.oldSpec.info.version);
   fs.writeFileSync("./output/changelog.html", webPage, "utf-8");
 }
@@ -111,8 +132,24 @@ async function mergeSpecWithChanges(diff, specPath) {
 
   diff = diff.map(d => {
     pathDetails = paths[d.path];
-    //console.log("pathDetails", pathDetails);
-    if (pathDetails) {
+    if (!pathDetails) {
+      return d;
+    }
+    pathDetailKeys = Object.keys(pathDetails);
+
+    let firstPath = pathDetails[pathDetailKeys[0]];
+    if (firstPath) {
+      //console.log("Object.keys(pathDetails)", Object.keys(pathDetails));
+
+      if (firstPath.tags) {
+        console.log("pathDetails.tags", firstPath.tags);
+        if (firstPath.tags.length > 0) {
+          d.group = firstPath.tags[0];
+        }
+      } else {
+        d.group = "Other Changes";
+      }
+
       if (d.method) {
         if (Object.keys(pathDetails).includes(d.method)) {
           d.apiDetails = pathDetails[d.method];
@@ -127,6 +164,5 @@ async function mergeSpecWithChanges(diff, specPath) {
     }
   });
 
-  //console.log("diff", diff);
   return diff;
 }

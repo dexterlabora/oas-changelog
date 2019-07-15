@@ -1,0 +1,51 @@
+
+
+doctype html
+html(lang="en")
+  head
+    link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+    integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous")
+    link(rel="stylesheet" href="style.css")
+    title What's New?
+  body.container   
+    h1 API Changelog
+    p Version #{oldSpec.info.version} to #{newSpec.info.version} 
+      // Group by Named Type
+      for n in uniqueNames
+        h2= n       
+        // Group by Group Tag
+        - const diffNames = diff.filter(d => d.name === n)
+        for ug in uniqueGroups
+          - const diffGroups = diffNames.filter(d => d.group === ug)
+
+          for dg,i in diffGroups
+            
+            if i == 0
+              h3= dg.group
+              // Group by Methods
+              for um in uniqueMethods
+                - const diffMethods = diff.filter(d => d.name === n && d.group === ug && d.method === um)
+                - const uniquePaths = [...new Set(diffMethods.map(item => item.path))];        
+                // Limit duplicate path details   
+                for up,i in uniquePaths
+                  - const paths = diffMethods.filter(d => d.path === up)                 
+          
+                  for p,i in paths
+                    // Only display method and path for first iteration
+                    if i == 0
+                      h5(class=`mr-4 badge ${p.method || 'path'}`) #{p.method || `PATH`}
+                      code(style="background-color:lightgray; color:black") #{p.path}
+                      if p.apiDetails
+                        p.ml-4
+                          strong= p.apiDetails.summary                 
+                    p.ml-4 !{p.messageHtml}
+                
+
+          
+
+
+
+
+       
+                          
+    

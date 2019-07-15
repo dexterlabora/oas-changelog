@@ -15,10 +15,13 @@ function deleteObjectProperty(_ref) {
   if (match) {
     var objectPath = path.slice(0, -2).join("/");
     var propertyName = path[path.length - 1];
+    var pathId = path[1];
     return {
       message: `\`${objectPath}\` - Property \`${propertyName}\` Deleted`,
       messageHtml: `Property <code>${propertyName}</code> Deleted`,
-      path: objectPath,
+      path: pathId,
+      method: path[2],
+      objectPath,
       property: propertyName
     };
   }

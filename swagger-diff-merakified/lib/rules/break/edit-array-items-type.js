@@ -17,11 +17,14 @@ function editArrayItemsType(_ref) {
     path[path.length - 1] === "type";
   if (match) {
     var arrayPath = path.slice(0, -2).join("/");
+    var pathId = path[1];
     return {
       message:
         arrayPath + " - Array items type turn from " + lhs + " to " + rhs,
       messageHtml: `<code>${arrayPath}</code> - Array items type turn from <code>${lhs}</code> to <code>$s{rhs}</code>`,
-      path: arrayPath,
+      arrayPath: arrayPath,
+      path: pathId,
+      method: path[2],
       previousType: lhs,
       currentType: rhs
     };

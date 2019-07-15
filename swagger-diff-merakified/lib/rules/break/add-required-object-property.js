@@ -18,10 +18,13 @@ function addRequiredObjectProperty(_ref) {
   if (match) {
     var objectPath = path.slice(0, -2).join("/");
     var propertyName = path[path.length - 1];
+    var pathId = path[1];
     return {
       message: `\`${objectPath}\` - Required property \`${propertyName}\` Added`,
       messageHtml: `<strong>Required property</strong> <span><code>${propertyName}</code> Added</span>`,
-      path: objectPath,
+      objectPath: objectPath,
+      path: pathId,
+      method: path[2],
       property: propertyName
     };
   }

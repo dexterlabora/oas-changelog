@@ -1,0 +1,16 @@
+
+.post {
+    background-color: sandybrown
+}
+.get {
+    background-color: green
+}
+.put {
+    background-color: steelblue
+}
+.delete {
+    background-color: tomato
+}
+.path {
+    background-color: lightpink
+}

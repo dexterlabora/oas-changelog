@@ -16,6 +16,7 @@ function addPath(_ref) {
     return {
       message: `\`${pathId}\` - Added`,
       messageHtml: `Path Added`,
+      method: path[2],
       path: pathId
     };
   }

@@ -16,6 +16,7 @@ function deletePath(_ref) {
     return {
       message: `\`${pathId}\` - Deleted`,
       messageHtml: `Deleted`,
+      method: path[2],
       path: pathId
     };
   }

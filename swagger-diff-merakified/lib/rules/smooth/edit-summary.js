@@ -22,6 +22,7 @@ function editSummary(_ref) {
       message: `\`${pathId}\` (${method}) - Summary turned from \`${lhs}\` to \`${rhs}\``,
       messageHtml: `Summary changed from <code>${lhs}</code> to <code>${rhs}</code>`,
       method: method,
+      path: pathId,
       previousSummary: lhs,
       currentSummary: rhs
     };

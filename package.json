@@ -11,6 +11,7 @@
   "dependencies": {
     "commander": "^2.20.0",
     "handlebars": "^4.1.2",
+    "pug": "^2.0.4",
     "swagger-parser": "^8.0.0"
   },
   "type": "module",

@@ -146,6 +146,7 @@ function detectRenames(diff, config) {
       retVal.push({
         ruleId: "rename-path",
         message: `Path \`${endpoint}\` renamed to \`${closest.endpoint}\``,
+        messageHtml: `Path <code>${endpoint}</code> renamed to <code>${closest.endpoint}</code>`,
         path: endpoint,
         newPath: closest.endpoint,
         type: "renamed"
@@ -187,6 +188,7 @@ function detectRenames(diff, config) {
         message: `\`${param.path}\` (*${param.method}*) - Param \`${
           param.param
         }\` renamed to \`${closest.param.param}\``,
+        messageHtml: `Param <code>${param.param}</code> renamed to <code>${closest.param.param}</code>`,
         path: param.path,
         method: param.method,
         param: param.param,

@@ -16,7 +16,8 @@ function deleteDefinition(_ref) {
     return {
       message: `\`${pathId}\` - Deleted`,
       messageHtml: `Deleted`,
-      path: pathId
+      path: pathId,
+      method: path[2]
     };
   }
   return false;

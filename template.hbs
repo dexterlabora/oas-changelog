@@ -1,81 +1,73 @@
-<h1>Dashboard API Changelog</h1>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+    integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
-<h2>Version</h2>
+<div class="container">
+    <h1>What's new?</h1>
+    <p>
+        From version {{oldSpec.info.version}} to {{newSpec.info.version}}
+    </p>
 
-<h2>What's new?</h2>
-From {{oldSpec.info.version}} to {{newSpec.info.version}}
+    <h2>Dashboard API Changelog</h2>
+    {{#each uniqueNames as |name|}}
+    <h3>{{name}}</h3>
 
-<h3>Major</h3>
-<ul>
-    {{#each diff}}
-    {{#ifEquals this.name "Major"}}
-    <li>
-        <h4>{{toUpperCase this.method}} <code>{{this.path}}</code></h4>
-        {{#if this.apiDetails.tags}}
-        <strong>{{this.apiDetails.tags}}<i> - {{this.apiDetails.summary}}</i></strong>
-        {{/if}}
-        <p>
-            {{{this.messageHtml}}}
-        </p>
-    </li>
-    {{/ifEquals}}
+        {{#each ../uniqueGroups as |group|}}
+            <h4>{{group}}</h4>
+
+            {{#each ../../uniquePaths as |path|}}
+            
+
+                {{#each ../../../diff as |diff value|}}
+                    {{#ifEquals diff.name name}}
+                    {{#ifEquals diff.group group}}                   
+                    {{#ifEquals diff.path path}}
+                        
+                            <h5>
+                            {{#if diff.method}}                               
+                                <span class="mr-4 badge {{diff.method}}">{{toUpperCase diff.method}}</span>
+                                {{else}} 
+                                <span class="mr-4 badge all">ALL</span>
+                            {{/if}}
+                            <codestyle="background-color:lightgray; color:black">{{diff.path}}</code>
+                            </h5>                      
+                            <strong>{{diff.apiDetails.summary}}</i></strong>
+                       
+                        <p class="ml-3">
+                            {{{diff.messageHtml}}}
+                        </p>     
+                    {{/ifEquals}} 
+                    {{/ifEquals}}  
+                    {{/ifEquals}}
+                {{/each}}
+            {{/each}}
+            
+        {{/each}}
+
     {{/each}}
-</ul>
 
-<h3>Breaking</h3>
-<ul>
-    {{#each diff}}
-    {{#ifEquals this.name "Breaking"}}
-    <li>
-        <h4>{{toUpperCase this.method}} <code>{{this.path}}</code></h4>
-        {{#if this.apiDetails.tags}}
-        <strong>{{this.apiDetails.tags}}<i> - {{this.apiDetails.summary}}</i></strong>
-        {{/if}}
-        <p>
-            {{{this.messageHtml}}}
-        </p>
-    </li>
-    {{/ifEquals}}
-    {{/each}}
-</ul>
 
-<h3>Renamed</h3>
-<ul>
-    {{#each diff}}
-    {{#ifEquals this.name "Renamed"}}
-    <li>
-        <h4>{{toUpperCase this.method}} <code>{{this.path}}</code></h4>
-        {{#if this.apiDetails.tags}}
-        <strong>{{this.apiDetails.tags}}<i> - {{this.apiDetails.summary}}</i></strong>
-        {{/if}}
-        <p>
-            {{{this.messageHtml}}}
-        </p>
-    </li>
-    {{/ifEquals}}
-    {{/each}}
-</ul>
-
-<h3>Changes</h3>
-<ul>
-    {{#each diff}}
-    {{#ifEquals this.name "Changes"}}
-    <li>
-        <h4>{{this.apiDetails.summary}}</h4>
-        <strong>{{toUpperCase this.method}} </strong>
-        <span> <code>{{this.path}}</code></span>
-        <br>
-        {{{this.messageHtml}}}
-    </li>
-    {{/ifEquals}}
-    {{/each}}
-</ul>
+</div>
 
 
 
-<hr>
-ToDo
+<style>
+    .post {
+        background-color: sandybrown
+    }
 
-name: "Unmatched"
+    .get {
+        background-color: green
+    }
 
-name: "UnmatchDiffs"
+    .put {
+        background-color: steelblue
+    }
+
+    .delete {
+        background-color: tomato
+    }
+
+    .all {
+        background-color: lightgray
+    }
+</style>

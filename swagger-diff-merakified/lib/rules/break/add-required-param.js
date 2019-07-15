@@ -25,6 +25,7 @@ function addRequiredParam(_ref) {
       messageHtml: `<strong>Required param</strong> <span><code>${paramName}</code> Added</span>`,
       path: pathId,
       method: method,
+      method: path[2],
       param: paramName
     };
   }
