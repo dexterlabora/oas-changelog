@@ -36200,7 +36200,7 @@
     }
   },
   "uniqueNames": [
-    "Breaking",
+    "Updates",
     "UnmatchDiffs"
   ],
   "uniqueGroups": [
@@ -36231,7 +36231,7 @@
       "method": "post",
       "property": "name",
       "type": "errors",
-      "name": "Breaking",
+      "name": "Updates",
       "group": "HTTP servers",
       "apiDetails": {
         "description": "Add an HTTP server to a network",
@@ -36308,7 +36308,7 @@
       "method": "post",
       "property": "url",
       "type": "errors",
-      "name": "Breaking",
+      "name": "Updates",
       "group": "HTTP servers",
       "apiDetails": {
         "description": "Add an HTTP server to a network",
@@ -36384,7 +36384,7 @@
       "method": "post",
       "param": "createNetworkHttpServer",
       "type": "errors",
-      "name": "Breaking",
+      "name": "Updates",
       "group": "HTTP servers",
       "apiDetails": {
         "description": "Add an HTTP server to a network",
@@ -36461,7 +36461,7 @@
       "method": "post",
       "property": "url",
       "type": "errors",
-      "name": "Breaking",
+      "name": "Updates",
       "group": "HTTP servers",
       "apiDetails": {
         "description": "Send a test webhook for a network",
@@ -36524,7 +36524,7 @@
       "method": "post",
       "param": "createNetworkHttpServersWebhookTest",
       "type": "errors",
-      "name": "Breaking",
+      "name": "Updates",
       "group": "HTTP servers",
       "apiDetails": {
         "description": "Send a test webhook for a network",
@@ -36590,7 +36590,7 @@
       "previousType": "string",
       "currentType": "boolean",
       "type": "errors",
-      "name": "Breaking",
+      "name": "Updates",
       "group": "Switch ports",
       "apiDetails": {
         "description": "Update a switch port",
@@ -36719,7 +36719,7 @@
       "previousType": "string",
       "currentType": "integer",
       "type": "errors",
-      "name": "Breaking",
+      "name": "Updates",
       "group": "Switch ports",
       "apiDetails": {
         "description": "Update a switch port",
@@ -36848,7 +36848,7 @@
       "previousType": "string",
       "currentType": "integer",
       "type": "errors",
-      "name": "Breaking",
+      "name": "Updates",
       "group": "Switch ports",
       "apiDetails": {
         "description": "Update a switch port",
@@ -36977,7 +36977,7 @@
       "previousType": "string",
       "currentType": "boolean",
       "type": "errors",
-      "name": "Breaking",
+      "name": "Updates",
       "group": "Switch ports",
       "apiDetails": {
         "description": "Update a switch port",
@@ -37106,7 +37106,7 @@
       "previousType": "string",
       "currentType": "boolean",
       "type": "errors",
-      "name": "Breaking",
+      "name": "Updates",
       "group": "Switch ports",
       "apiDetails": {
         "description": "Update a switch port",
@@ -37235,7 +37235,7 @@
       "previousType": "string",
       "currentType": "boolean",
       "type": "errors",
-      "name": "Breaking",
+      "name": "Updates",
       "group": "Switch ports",
       "apiDetails": {
         "description": "Update a switch port",
@@ -37364,7 +37364,7 @@
       "previousType": "string",
       "currentType": "integer",
       "type": "errors",
-      "name": "Breaking",
+      "name": "Updates",
       "group": "Switch ports",
       "apiDetails": {
         "description": "Update a switch port",
@@ -37491,7 +37491,7 @@
       "objectPath": "paths//networks/{networkId}/groupPolicies/post/parameters/createNetworkGroupPolicy/schema",
       "property": "contentFiltering",
       "type": "errors",
-      "name": "Breaking",
+      "name": "Updates",
       "group": "Group policies",
       "apiDetails": {
         "description": "Create a group policy",
@@ -38435,7 +38435,7 @@
       "objectPath": "paths//networks/{networkId}/groupPolicies/{groupPolicyId}/put/parameters/updateNetworkGroupPolicy/schema",
       "property": "contentFiltering",
       "type": "errors",
-      "name": "Breaking",
+      "name": "Updates",
       "group": "Group policies",
       "apiDetails": {
         "description": "Update a group policy",
@@ -39381,7 +39381,7 @@
       "previousSummary": "Add an HTTP server",
       "currentSummary": "Add an HTTP server to a network",
       "type": "errors",
-      "name": "Breaking",
+      "name": "Updates",
       "group": "HTTP servers",
       "apiDetails": {
         "description": "Add an HTTP server to a network",
@@ -39459,7 +39459,7 @@
       "previousDescription": "Add an HTTP server",
       "currentDescription": "Add an HTTP server to a network",
       "type": "errors",
-      "name": "Breaking",
+      "name": "Updates",
       "group": "HTTP servers",
       "apiDetails": {
         "description": "Add an HTTP server to a network",
@@ -39536,7 +39536,7 @@
       "previousSummary": "Return an HTTP server",
       "currentSummary": "Return an HTTP server for a network",
       "type": "errors",
-      "name": "Breaking",
+      "name": "Updates",
       "group": "HTTP servers",
       "apiDetails": {
         "description": "Return an HTTP server for a network",
@@ -39589,7 +39589,7 @@
       "previousDescription": "Return an HTTP server",
       "currentDescription": "Return an HTTP server for a network",
       "type": "errors",
-      "name": "Breaking",
+      "name": "Updates",
       "group": "HTTP servers",
       "apiDetails": {
         "description": "Return an HTTP server for a network",
@@ -39641,7 +39641,7 @@
       "previousSummary": "Delete an HTTP server",
       "currentSummary": "Delete an HTTP server from a network",
       "type": "errors",
-      "name": "Breaking",
+      "name": "Updates",
       "group": "HTTP servers",
       "apiDetails": {
         "description": "Delete an HTTP server from a network",
@@ -39681,7 +39681,7 @@
       "previousDescription": "Delete an HTTP server",
       "currentDescription": "Delete an HTTP server from a network",
       "type": "errors",
-      "name": "Breaking",
+      "name": "Updates",
       "group": "HTTP servers",
       "apiDetails": {
         "description": "Delete an HTTP server from a network",
@@ -39720,7 +39720,7 @@
       "previousSummary": "Send a test webhook",
       "currentSummary": "Send a test webhook for a network",
       "type": "errors",
-      "name": "Breaking",
+      "name": "Updates",
       "group": "HTTP servers",
       "apiDetails": {
         "description": "Send a test webhook for a network",
@@ -39785,7 +39785,7 @@
       "previousDescription": "Send a test webhook",
       "currentDescription": "Send a test webhook for a network",
       "type": "errors",
-      "name": "Breaking",
+      "name": "Updates",
       "group": "HTTP servers",
       "apiDetails": {
         "description": "Send a test webhook for a network",
@@ -39849,7 +39849,7 @@
       "previousSummary": "Return the status of a webhook test",
       "currentSummary": "Return the status of a webhook test for a network",
       "type": "errors",
-      "name": "Breaking",
+      "name": "Updates",
       "group": "HTTP servers",
       "apiDetails": {
         "description": "Return the status of a webhook test for a network",
@@ -39900,7 +39900,7 @@
       "previousDescription": "Return the status of a webhook test",
       "currentDescription": "Return the status of a webhook test for a network",
       "type": "errors",
-      "name": "Breaking",
+      "name": "Updates",
       "group": "HTTP servers",
       "apiDetails": {
         "description": "Return the status of a webhook test for a network",
@@ -39950,7 +39950,7 @@
       "previousSummary": "Set the supported instrusion settings for an MX network",
       "currentSummary": "Set the supported intrusion settings for an MX network",
       "type": "errors",
-      "name": "Breaking",
+      "name": "Updates",
       "group": "Intrusion settings",
       "apiDetails": {
         "description": "Set the supported intrusion settings for an MX network",
@@ -40065,7 +40065,7 @@
       "previousDescription": "Set the supported instrusion settings for an MX network",
       "currentDescription": "Set the supported intrusion settings for an MX network",
       "type": "errors",
-      "name": "Breaking",
+      "name": "Updates",
       "group": "Intrusion settings",
       "apiDetails": {
         "description": "Set the supported intrusion settings for an MX network",
@@ -40180,7 +40180,7 @@
       "previousDescription": "Set the included/excluded networks from the intrusion engine (optional - omitting will leave current config unchanged)",
       "currentDescription": "Set the included/excluded networks from the intrusion engine (optional - omitting will leave current config unchanged). This is available only in 'passthrough' mode",
       "type": "errors",
-      "name": "Breaking",
+      "name": "Updates",
       "group": "Intrusion settings",
       "apiDetails": {
         "description": "Set the supported intrusion settings for an MX network",
@@ -40294,7 +40294,7 @@
       "objectPath": "paths//devices/{serial}/switchPorts/{number}/put/parameters/updateDeviceSwitchPort/schema",
       "property": "portScheduleId",
       "type": "errors",
-      "name": "Breaking",
+      "name": "Updates",
       "group": "Switch ports",
       "apiDetails": {
         "description": "Update a switch port",
@@ -40418,7 +40418,7 @@
       "messageHtml": "Path Added",
       "path": "/networks/{networkId}/sm/bypassActivationLockAttempts",
       "type": "errors",
-      "name": "Breaking",
+      "name": "Updates",
       "group": "SM",
       "apiDetails": {
         "post": {
@@ -40487,7 +40487,7 @@
       "messageHtml": "Path Added",
       "path": "/networks/{networkId}/sm/bypassActivationLockAttempts/{attemptId}",
       "type": "errors",
-      "name": "Breaking",
+      "name": "Updates",
       "group": "SM",
       "apiDetails": {
         "get": {
@@ -40546,7 +40546,7 @@
       "messageHtml": "Path Added",
       "path": "/networks/{networkId}/switch/portSchedules",
       "type": "errors",
-      "name": "Breaking",
+      "name": "Updates",
       "group": "Switch port schedules",
       "apiDetails": {
         "get": {
@@ -40591,7 +40591,7 @@
       "messageHtml": "Path Added",
       "path": "/networks/{networkId}/trafficAnalysisSettings",
       "type": "errors",
-      "name": "Breaking",
+      "name": "Updates",
       "group": "Traffic analysis settings",
       "apiDetails": {
         "get": {
@@ -40795,7 +40795,7 @@
       "messageHtml": "Path Added",
       "path": "/organizations/{organizationId}",
       "type": "errors",
-      "name": "Breaking",
+      "name": "Updates",
       "group": "Organizations",
       "apiDetails": {
         "delete": {

@@ -12,7 +12,7 @@ html(lang="en")
     p Version #{oldSpec.info.version} to #{newSpec.info.version} 
       // Group by Named Type
       for n in uniqueNames
-        h2= n       
+        h2.names= n       
         // Group by Group Tag
         - const diffNames = diff.filter(d => d.name === n)
         for ug in uniqueGroups
@@ -21,7 +21,7 @@ html(lang="en")
           for dg,i in diffGroups
             
             if i == 0
-              h3= dg.group
+              h4= dg.group
               // Group by Methods
               for um in uniqueMethods
                 - const diffMethods = diff.filter(d => d.name === n && d.group === ug && d.method === um)
@@ -38,7 +38,7 @@ html(lang="en")
                       if p.apiDetails
                         p.ml-4
                           strong= p.apiDetails.summary                 
-                    p.ml-4 !{p.messageHtml}
+                    p.ml-5 !{p.messageHtml}
                 
 
           
