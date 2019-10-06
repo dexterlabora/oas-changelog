@@ -20,7 +20,7 @@ const fs = require("fs");
 
 const SwaggerParser = require("swagger-parser");
 const hbs = require("handlebars");
-var pug = require('pug');
+var pug = require("pug");
 
 const oldSpec = program.oldSpec || "";
 const newSpec = program.newSpec || "";
@@ -38,7 +38,7 @@ var config = {
       unchanged: 0
     },
     smooths: {
-      major: 0,
+      major: 1,
       minor: 1,
       patch: 2,
       unchanged: 0
@@ -46,11 +46,14 @@ var config = {
   }
 };
 
+var TurndownService = require("turndown");
+var turndownService = new TurndownService();
+
 changelog(oldSpec, newSpec, config).then(log => {
   //console.log("log", log);
   //console.log("log.items", log.items);
 
-  writeMarkdownFile(log.paragraph);
+  //writeMarkdownFile(log.paragraph);
 
   mergeSpecWithChanges(log.diff, newSpec).then(res => {
     //console.log("log.diff", JSON.stringify(log.diff));
@@ -62,20 +65,32 @@ changelog(oldSpec, newSpec, config).then(log => {
     context.newSpec = newSpecFile;
     context.oldSpec = oldSpecFile;
     context.uniqueNames = [...new Set(diff.map(item => item.name))];
+    // move Renamed to top
+    context.uniqueNames = [
+      "Renamed",
+      ...context.uniqueNames.filter(item => item !== "Renamed")
+    ];
     context.uniqueGroups = [...new Set(diff.map(item => item.group))];
-    
+
     context.uniqueMethods = [...new Set(diff.map(item => item.method))];
     context.diff = diff;
 
     writeJsonFile(context);
     //writeHbsWeb(context);
     writePugWeb(context);
+
+    writeMarkdownFile(context);
   });
 });
 
 function writeMarkdownFile(data) {
   //console.log(log.paragraph);
-  fs.writeFileSync("./output/changelog.md", data, "utf-8");
+  // convert webpage to markdown version
+  var html = pug.renderFile("index.pug", data);
+  turndownService.remove(["style"]);
+  var markdown = turndownService.turndown(html);
+
+  fs.writeFileSync("./output/changelog.md", markdown, "utf-8");
 }
 
 function writeJsonFile(data) {
@@ -86,13 +101,13 @@ function writeJsonFile(data) {
   );
 }
 
-function writePugWeb(data){
-  
+function writePugWeb(data) {
   // renderFile
-  var html = pug.renderFile('index.pug', data);
+  var html = pug.renderFile("index.pug", data);
   fs.writeFileSync("./output/web/changelog.html", html, "utf-8");
 }
 
+// Deprecating
 function writeHbsWeb(data) {
   hbs.registerHelper("ifEquals", function(arg1, arg2, options) {
     return arg1 == arg2 ? options.fn(this) : options.inverse(this);

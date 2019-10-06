@@ -1,1 +1,434 @@
-<!DOCTYPE html><html lang="en"><head><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous"><link rel="stylesheet" href="style.css"><title>What's New?</title></head><body class="container">  <h1>API Changelog</h1><p>Version 0.1.0 to 0.1.0 <!-- Group by Named Type--><h2 class="names">Updates</h2><!-- Group by Group Tag--><h4>HTTP servers</h4><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><h5 class="mr-4 badge post">post</h5><code style="background-color:lightgray; color:black">/networks/{networkId}/httpServers</code><p class="ml-4"><strong>Add an HTTP server to a network</strong></p><p class="ml-5">Property <code>name</code> became required</p><!-- Only display method and path for first iteration--><p class="ml-5">Property <code>url</code> became required</p><!-- Only display method and path for first iteration--><p class="ml-5">Param <code>createNetworkHttpServer</code> became required</p><!-- Only display method and path for first iteration--><p class="ml-5">Summary changed from <code>Add an HTTP server</code> to <code>Add an HTTP server to a network</code></p><!-- Only display method and path for first iteration--><p class="ml-5">Description turned from <code>Add an HTTP server</code> to <code>Add an HTTP server to a network</code></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge post">post</h5><code style="background-color:lightgray; color:black">/networks/{networkId}/httpServers/webhookTests</code><p class="ml-4"><strong>Send a test webhook for a network</strong></p><p class="ml-5">Property <code>url</code> became required</p><!-- Only display method and path for first iteration--><p class="ml-5">Param <code>createNetworkHttpServersWebhookTest</code> became required</p><!-- Only display method and path for first iteration--><p class="ml-5">Summary changed from <code>Send a test webhook</code> to <code>Send a test webhook for a network</code></p><!-- Only display method and path for first iteration--><p class="ml-5">Description turned from <code>Send a test webhook</code> to <code>Send a test webhook for a network</code></p><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><h5 class="mr-4 badge get">get</h5><code style="background-color:lightgray; color:black">/networks/{networkId}/httpServers/{id}</code><p class="ml-4"><strong>Return an HTTP server for a network</strong></p><p class="ml-5">Summary changed from <code>Return an HTTP server</code> to <code>Return an HTTP server for a network</code></p><!-- Only display method and path for first iteration--><p class="ml-5">Description turned from <code>Return an HTTP server</code> to <code>Return an HTTP server for a network</code></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge get">get</h5><code style="background-color:lightgray; color:black">/networks/{networkId}/httpServers/webhookTests/{id}</code><p class="ml-4"><strong>Return the status of a webhook test for a network</strong></p><p class="ml-5">Summary changed from <code>Return the status of a webhook test</code> to <code>Return the status of a webhook test for a network</code></p><!-- Only display method and path for first iteration--><p class="ml-5">Description turned from <code>Return the status of a webhook test</code> to <code>Return the status of a webhook test for a network</code></p><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><h5 class="mr-4 badge delete">delete</h5><code style="background-color:lightgray; color:black">/networks/{networkId}/httpServers/{id}</code><p class="ml-4"><strong>Delete an HTTP server from a network</strong></p><p class="ml-5">Summary changed from <code>Delete an HTTP server</code> to <code>Delete an HTTP server from a network</code></p><!-- Only display method and path for first iteration--><p class="ml-5">Description turned from <code>Delete an HTTP server</code> to <code>Delete an HTTP server from a network</code></p><!-- Limit duplicate path details   --><h4>Switch ports</h4><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><h5 class="mr-4 badge put">put</h5><code style="background-color:lightgray; color:black">/devices/{serial}/switchPorts/{number}</code><p class="ml-4"><strong>Update a switch port</strong></p><p class="ml-5">Property <code>enabled</code> type turn from <code>string</code> to <code>boolean</code></p><!-- Only display method and path for first iteration--><p class="ml-5">Property <code>vlan</code> type turn from <code>string</code> to <code>integer</code></p><!-- Only display method and path for first iteration--><p class="ml-5">Property <code>voiceVlan</code> type turn from <code>string</code> to <code>integer</code></p><!-- Only display method and path for first iteration--><p class="ml-5">Property <code>poeEnabled</code> type turn from <code>string</code> to <code>boolean</code></p><!-- Only display method and path for first iteration--><p class="ml-5">Property <code>isolationEnabled</code> type turn from <code>string</code> to <code>boolean</code></p><!-- Only display method and path for first iteration--><p class="ml-5">Property <code>rstpEnabled</code> type turn from <code>string</code> to <code>boolean</code></p><!-- Only display method and path for first iteration--><p class="ml-5">Property <code>accessPolicyNumber</code> type turn from <code>string</code> to <code>integer</code></p><!-- Only display method and path for first iteration--><p class="ml-5">Optional property <code>portScheduleId</code> Added</p><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h4>Group policies</h4><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><h5 class="mr-4 badge post">post</h5><code style="background-color:lightgray; color:black">/networks/{networkId}/groupPolicies</code><p class="ml-4"><strong>Create a group policy</strong></p><p class="ml-5">Optional property <code>contentFiltering</code> Added</p><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><h5 class="mr-4 badge put">put</h5><code style="background-color:lightgray; color:black">/networks/{networkId}/groupPolicies/{groupPolicyId}</code><p class="ml-4"><strong>Update a group policy</strong></p><p class="ml-5">Optional property <code>contentFiltering</code> Added</p><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h4>Intrusion settings</h4><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><h5 class="mr-4 badge put">put</h5><code style="background-color:lightgray; color:black">/networks/{networkId}/security/intrusionSettings</code><p class="ml-4"><strong>Set the supported intrusion settings for an MX network</strong></p><p class="ml-5">Summary changed from <code>Set the supported instrusion settings for an MX network</code> to <code>Set the supported intrusion settings for an MX network</code></p><!-- Only display method and path for first iteration--><p class="ml-5">Description turned from <code>Set the supported instrusion settings for an MX network</code> to <code>Set the supported intrusion settings for an MX network</code></p><!-- Only display method and path for first iteration--><p class="ml-5">Description turned from <code>Set the included/excluded networks from the intrusion engine (optional - omitting will leave current config unchanged)</code> to <code>Set the included/excluded networks from the intrusion engine (optional - omitting will leave current config unchanged). This is available only in 'passthrough' mode</code></p><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h4>SM</h4><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">/networks/{networkId}/sm/bypassActivationLockAttempts</code><p class="ml-4"><strong></strong></p><p class="ml-5">Path Added</p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">/networks/{networkId}/sm/bypassActivationLockAttempts/{attemptId}</code><p class="ml-4"><strong></strong></p><p class="ml-5">Path Added</p><h4>Switch port schedules</h4><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">/networks/{networkId}/switch/portSchedules</code><p class="ml-4"><strong></strong></p><p class="ml-5">Path Added</p><h4>Traffic analysis settings</h4><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">/networks/{networkId}/trafficAnalysisSettings</code><p class="ml-4"><strong></strong></p><p class="ml-5">Path Added</p><h4>Organizations</h4><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">/organizations/{organizationId}</code><p class="ml-4"><strong></strong></p><p class="ml-5">Path Added</p><h2 class="names">UnmatchDiffs</h2><!-- Group by Group Tag--><h4></h4><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/organizations/{organizationId}/networks,get,responses,200,examples,application/json,0,organizationId</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/organizations/{organizationId}/networks,post,responses,201,examples,application/json,organizationId</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId},get,responses,200,examples,application/json,organizationId</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId},put,responses,200,examples,application/json,organizationId</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/organizations/{organizationId}/networks/combine,post,responses,200,examples,application/json,resultingNetwork,organizationId</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/split,post,responses,200,examples,application/json,resultingNetworks,0,organizationId</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/split,post,responses,200,examples,application/json,resultingNetworks,1,organizationId</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/groupPolicies,get,responses,200,examples,application/json,0,contentFiltering</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/groupPolicies,post,parameters,createNetworkGroupPolicy,schema,example,contentFiltering</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/groupPolicies,post,responses,201,examples,application/json,contentFiltering</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/groupPolicies/{groupPolicyId},get,responses,200,examples,application/json,contentFiltering</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/groupPolicies/{groupPolicyId},put,parameters,updateNetworkGroupPolicy,schema,example,contentFiltering</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/groupPolicies/{groupPolicyId},put,responses,200,examples,application/json,contentFiltering</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/httpServers/webhookTests,post,parameters,createNetworkHttpServersWebhookTest,schema,example</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/organizations,get,responses,200,examples,application/json,0,id</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/organizations,post,responses,201,examples,application/json,id</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/organizations/{id},get,responses,200,examples,application/json,id</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/organizations/{id},put,responses,200,examples,application/json,id</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/organizations/{id}/clone,post,responses,201,examples,application/json,id</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/ssids,get,responses,200,examples,application/json,0,authMode</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/ssids,get,responses,200,examples,application/json,0,encryptionMode</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/ssids,get,responses,200,examples,application/json,0,wpaEncryptionMode</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/ssids,get,responses,200,examples,application/json,0,radiusServers</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/ssids,get,responses,200,examples,application/json,0,radiusAccountingEnabled</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/ssids,get,responses,200,examples,application/json,0,radiusEnabled</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/ssids,get,responses,200,examples,application/json,0,radiusAttributeForGroupPolicies</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/ssids,get,responses,200,examples,application/json,0,radiusFailoverPolicy</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/ssids,get,responses,200,examples,application/json,0,radiusLoadBalancingPolicy</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/ssids,get,responses,200,examples,application/json,0,adminSplashUrl</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/ssids,get,responses,200,examples,application/json,0,splashTimeout</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/ssids,get,responses,200,examples,application/json,0,walledGardenEnabled</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/ssids,get,responses,200,examples,application/json,0,walledGardenRanges</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/ssids,get,responses,200,examples,application/json,0,minBitrate</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/ssids/{number},get,responses,200,examples,application/json,authMode</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/ssids/{number},get,responses,200,examples,application/json,encryptionMode</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/ssids/{number},get,responses,200,examples,application/json,wpaEncryptionMode</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/ssids/{number},get,responses,200,examples,application/json,radiusServers</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/ssids/{number},get,responses,200,examples,application/json,radiusAccountingEnabled</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/ssids/{number},get,responses,200,examples,application/json,radiusEnabled</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/ssids/{number},get,responses,200,examples,application/json,radiusAttributeForGroupPolicies</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/ssids/{number},get,responses,200,examples,application/json,radiusFailoverPolicy</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/ssids/{number},get,responses,200,examples,application/json,radiusLoadBalancingPolicy</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/ssids/{number},get,responses,200,examples,application/json,adminSplashUrl</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/ssids/{number},get,responses,200,examples,application/json,splashTimeout</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/ssids/{number},get,responses,200,examples,application/json,walledGardenEnabled</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/ssids/{number},get,responses,200,examples,application/json,walledGardenRanges</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/ssids/{number},get,responses,200,examples,application/json,minBitrate</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/ssids/{number},put,responses,200,examples,application/json,authMode</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/ssids/{number},put,responses,200,examples,application/json,encryptionMode</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/ssids/{number},put,responses,200,examples,application/json,wpaEncryptionMode</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/ssids/{number},put,responses,200,examples,application/json,radiusServers</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/ssids/{number},put,responses,200,examples,application/json,radiusAccountingEnabled</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/ssids/{number},put,responses,200,examples,application/json,radiusEnabled</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/ssids/{number},put,responses,200,examples,application/json,radiusAttributeForGroupPolicies</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/ssids/{number},put,responses,200,examples,application/json,radiusFailoverPolicy</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/ssids/{number},put,responses,200,examples,application/json,radiusLoadBalancingPolicy</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/ssids/{number},put,responses,200,examples,application/json,adminSplashUrl</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/ssids/{number},put,responses,200,examples,application/json,splashTimeout</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/ssids/{number},put,responses,200,examples,application/json,walledGardenEnabled</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/ssids/{number},put,responses,200,examples,application/json,walledGardenRanges</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/networks/{networkId}/ssids/{number},put,responses,200,examples,application/json,minBitrate</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/devices/{serial}/switchPorts,get,responses,200,examples,application/json,0,portScheduleId</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/devices/{serial}/switchPorts/{number},get,responses,200,examples,application/json,portScheduleId</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/devices/{serial}/switchPorts/{number},put,parameters,updateDeviceSwitchPort,schema,example</code><p class="ml-5"></p><!-- Only display method and path for first iteration--><h5 class="mr-4 badge path">PATH</h5><code style="background-color:lightgray; color:black">paths,/devices/{serial}/switchPorts/{number},put,responses,200,examples,application/json,portScheduleId</code><p class="ml-5"></p></p></body></html>
+<!DOCTYPE html><html lang="en"><head><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous"><link rel="stylesheet" href="style.css"><title>Meraki Dashboard API Changelog</title></head><body class="container">  <h1>Changelog</h1><p>Version 0.3.0 to 0.4.0 <!-- Group by Named Type--><h2 class="names">Renamed</h2><!-- Group by Group Tag--><h3></h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">`/networks/{networkID}/switchStacks/{switchStackId}/remove`</code><p class="ml-5"><blockquote><p>Path <code>`/networks/{networkID}/switchStacks/{switchStackId}/remove`</code> renamed to <code>/networks/{networkId}/switchStacks/{switchStackId}/remove</code></p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h2 class="names">Updates</h2><!-- Group by Group Tag--><h3></h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/networks/{networkID}/switchStacks/{switchStackId}/remove</code><p class="ml-5"><blockquote><p>Deleted</p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>Networks</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Update the site-to-site VPN settings of a network. Only valid for MX networks in NAT mode.</strong></p><h4 class="mr-4 badge put">PUT  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/siteToSiteVpn</code><p class="ml-5"><blockquote><p>Property <code>mode</code> became required</p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Param <code>updateNetworkSiteToSiteVpn</code> became required</p></blockquote></p><hr><!-- Limit duplicate path details   --><h3>SSIDs</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Update the attributes of an SSID</strong></p><h4 class="mr-4 badge put">PUT  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/ssids/{number}</code><p class="ml-5"><blockquote><p>Property <code>host</code> became required</p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Property <code>secret</code> became required</p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Property <code>host</code> became required</p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Property <code>secret</code> became required</p></blockquote></p><hr><!-- Limit duplicate path details   --><h3>Radio settings</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Updates specified RF profile for this network</strong></p><h4 class="mr-4 badge put">PUT  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/wireless/rfProfiles/{rfProfileId}</code><p class="ml-5"><blockquote><p>Property <code>minBitrate</code> type turn from <code>string</code> to <code>number</code></p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Property <code>minBitrate</code> type turn from <code>string</code> to <code>integer</code></p></blockquote></p><hr><!-- Limit duplicate path details   --><h2 class="names">Changes</h2><!-- Group by Group Tag--><h3>Networks</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Return a network</strong></p><h4 class="mr-4 badge get">GET  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}</code><p class="ml-5"><blockquote><p>Response property <code>productTypes</code> value added:  
+      <pre><code>       
+        {
+          productTypes: ["appliance","switch","wireless"]
+        }
+</code></pre></p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong>    The traffic analysis data for this network.
+    &lt;a href=&quot;https://documentation.meraki.com/MR/Monitoring_and_Reporting/Hostname_Visibility&quot;&gt;Traffic Analysis with Hostname Visibility&lt;/a&gt; must be enabled on the network.
+</strong></p><h4 class="mr-4 badge get">GET  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/traffic</code><p class="ml-5"><blockquote><p>Optional param <code>t0</code> added</p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Summary changed from <code>The traffic analysis data for this network.
+<a href="https://documentation.meraki.com/MR/Monitoring_and_Reporting/Hostname_Visibility">Traffic Analysis with Hostname Visibility</a> must be enabled on the network.
+</code> to <code>    The traffic analysis data for this network.
+    <a href="https://documentation.meraki.com/MR/Monitoring_and_Reporting/Hostname_Visibility">Traffic Analysis with Hostname Visibility</a> must be enabled on the network.
+</code></p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong>List the networks in an organization</strong></p><h4 class="mr-4 badge get">GET  </h4><code style="background-color:lightgray; color:black">/organizations/{organizationId}/networks</code><p class="ml-5"><blockquote><p>Response property <code>productTypes</code> value added:  
+      <pre><code>       
+        {
+          productTypes: ["appliance","switch","wireless"]
+        }
+</code></pre></p></blockquote></p><hr><h3>SSIDs</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Update the attributes of an SSID</strong></p><h4 class="mr-4 badge put">PUT  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/ssids/{number}</code><p class="ml-5"><blockquote><p>Optional property <code>enterpriseAdminAccess</code> Added</p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Optional property <code>radiusAttributeForGroupPolicies</code> Added</p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Optional property <code>radiusOverride</code> Added</p></blockquote></p><hr><!-- Limit duplicate path details   --><h3>Bluetooth clients</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>List the Bluetooth clients seen by APs in this network</strong></p><h4 class="mr-4 badge get">GET  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/bluetoothClients</code><p class="ml-5"><blockquote><p>Optional param <code>t0</code> added</p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Response property <code>id</code> value added:  
+      <pre><code>       
+        {
+          id: "1284392014819"
+        }
+</code></pre></p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Response property <code>name</code> value added:  
+      <pre><code>       
+        {
+          name: "Miles's phone"
+        }
+</code></pre></p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Response property <code>deviceName</code> value added:  
+      <pre><code>       
+        {
+          deviceName: "Bose QuietComfort 35"
+        }
+</code></pre></p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Response property <code>manufacturer</code> value added:  
+      <pre><code>       
+        {
+          manufacturer: "Bose"
+        }
+</code></pre></p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Response property <code>lastSeen</code> value added:  
+      <pre><code>       
+        {
+          lastSeen: 1526087474
+        }
+</code></pre></p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Response property <code>seenByDeviceMac</code> value added:  
+      <pre><code>       
+        {
+          seenByDeviceMac: "00:11:22:33:44:55"
+        }
+</code></pre></p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Response property <code>inSightAlert</code> value added:  
+      <pre><code>       
+        {
+          inSightAlert: false
+        }
+</code></pre></p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Response property <code>outOfSightAlert</code> value added:  
+      <pre><code>       
+        {
+          outOfSightAlert: false
+        }
+</code></pre></p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Response property <code>tags</code> value added:  
+      <pre><code>       
+        {
+          tags: ["tag1","tag2"]
+        }
+</code></pre></p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Return a Bluetooth client. Bluetooth clients can be identified by their ID or their MAC.</strong></p><h4 class="mr-4 badge get">GET  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/bluetoothClients/{bluetoothClientId}</code><p class="ml-5"><blockquote><p>Response property <code>id</code> value added:  
+      <pre><code>       
+        {
+          id: "1284392014819"
+        }
+</code></pre></p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Response property <code>name</code> value added:  
+      <pre><code>       
+        {
+          name: "Miles's phone"
+        }
+</code></pre></p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Response property <code>deviceName</code> value added:  
+      <pre><code>       
+        {
+          deviceName: "Bose QuietComfort 35"
+        }
+</code></pre></p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Response property <code>manufacturer</code> value added:  
+      <pre><code>       
+        {
+          manufacturer: "Bose"
+        }
+</code></pre></p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Response property <code>lastSeen</code> value added:  
+      <pre><code>       
+        {
+          lastSeen: 1526087474
+        }
+</code></pre></p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Response property <code>seenByDeviceMac</code> value added:  
+      <pre><code>       
+        {
+          seenByDeviceMac: "00:11:22:33:44:55"
+        }
+</code></pre></p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Response property <code>inSightAlert</code> value added:  
+      <pre><code>       
+        {
+          inSightAlert: false
+        }
+</code></pre></p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Response property <code>outOfSightAlert</code> value added:  
+      <pre><code>       
+        {
+          outOfSightAlert: false
+        }
+</code></pre></p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Response property <code>tags</code> value added:  
+      <pre><code>       
+        {
+          tags: ["tag1","tag2"]
+        }
+</code></pre></p></blockquote></p><hr><h3>Clients</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Return the client associated with the given identifier. Clients can be identified by a client key or either the MAC or IP depending on whether the network uses Track-by-IP.</strong></p><h4 class="mr-4 badge get">GET  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/clients/{clientId}</code><p class="ml-5"><blockquote><p>Response property <code>status</code> value added:  
+      <pre><code>       
+        {
+          status: "Online"
+        }
+</code></pre></p></blockquote></p><hr><h3>Management interface settings</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Return the management interface settings for a device</strong></p><h4 class="mr-4 badge get">GET  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/devices/{serial}/managementInterfaceSettings</code><p class="ml-5"><blockquote><p>Response property <code>ddnsHostnames</code> value added:  
+      <pre><code>       
+        {
+          ddnsHostnames: {"activeDdnsHostname":"mx1-sample.dynamic-m.com","ddnsHostnameWan1":"mx1-sample-1.dynamic-m.com","ddnsHostnameWan2":"mx1-sample-2.dynamic-m.com"}
+        }
+</code></pre></p></blockquote></p><hr><h3>Switch settings</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong></strong></p><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/switch/settings/qosRules</code><p class="ml-5"><blockquote><p>Path added
+      <br>
+      <div class="mr-4 badge get">GET</div> 
+      <i>getNetworkSwitchSettingsQosRules</i>
+      <br>
+      <b>List quality of service rules</b>
+      
+      <pre><code>[
+    {
+        &quot;id&quot;: &quot;1284392014819&quot;,
+        &quot;vlan&quot;: 100,
+        &quot;protocol&quot;: &quot;TCP&quot;,
+        &quot;srcPort&quot;: 2000,
+        &quot;srcPortRange&quot;: null,
+        &quot;dstPort&quot;: null,
+        &quot;dstPortRange&quot;: &quot;3000-3100&quot;,
+        &quot;dscp&quot;: 0
+    }
+]</code></pre>
+      
+      <br>
+      <div class="mr-4 badge post">POST</div> 
+      <i>createNetworkSwitchSettingsQosRule</i>
+      <br>
+      <b>Add a quality of service rule</b>
+      
+      <pre><code>{
+    &quot;id&quot;: &quot;1284392014819&quot;,
+    &quot;vlan&quot;: 100,
+    &quot;protocol&quot;: &quot;TCP&quot;,
+    &quot;srcPort&quot;: 2000,
+    &quot;srcPortRange&quot;: null,
+    &quot;dstPort&quot;: null,
+    &quot;dstPortRange&quot;: &quot;3000-3100&quot;,
+    &quot;dscp&quot;: 0
+}</code></pre>
+      </p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong></strong></p><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/switch/settings/qosRules/order</code><p class="ml-5"><blockquote><p>Path added
+      <br>
+      <div class="mr-4 badge get">GET</div> 
+      <i>getNetworkSwitchSettingsQosRulesOrder</i>
+      <br>
+      <b>Return the quality of service rule IDs by order in which they will be processed by the switch</b>
+      
+      <pre><code>{
+    &quot;ruleIds&quot;: [
+        &quot;1284392014819&quot;,
+        &quot;2983092129865&quot;
+    ]
+}</code></pre>
+      
+      <br>
+      <div class="mr-4 badge put">PUT</div> 
+      <i>updateNetworkSwitchSettingsQosRulesOrder</i>
+      <br>
+      <b>Update the order in which the rules should be processed by the switch</b>
+      
+      <pre><code>{
+    &quot;ruleIds&quot;: [
+        &quot;1284392014819&quot;,
+        &quot;2983092129865&quot;
+    ]
+}</code></pre>
+      </p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong></strong></p><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/switch/settings/qosRules/{qosRuleId}</code><p class="ml-5"><blockquote><p>Path added
+      <br>
+      <div class="mr-4 badge get">GET</div> 
+      <i>getNetworkSwitchSettingsQosRule</i>
+      <br>
+      <b>Return a quality of service rule</b>
+      
+      <pre><code>{
+    &quot;id&quot;: &quot;1284392014819&quot;,
+    &quot;vlan&quot;: 100,
+    &quot;protocol&quot;: &quot;TCP&quot;,
+    &quot;srcPort&quot;: 2000,
+    &quot;srcPortRange&quot;: null,
+    &quot;dstPort&quot;: null,
+    &quot;dstPortRange&quot;: &quot;3000-3100&quot;,
+    &quot;dscp&quot;: 0
+}</code></pre>
+      
+      <br>
+      <div class="mr-4 badge put">PUT</div> 
+      <i>updateNetworkSwitchSettingsQosRule</i>
+      <br>
+      <b>Update a quality of service rule</b>
+      
+      <pre><code>{
+    &quot;id&quot;: &quot;1284392014819&quot;,
+    &quot;vlan&quot;: 100,
+    &quot;protocol&quot;: &quot;TCP&quot;,
+    &quot;srcPort&quot;: 2000,
+    &quot;srcPortRange&quot;: null,
+    &quot;dstPort&quot;: null,
+    &quot;dstPortRange&quot;: &quot;3000-3100&quot;,
+    &quot;dscp&quot;: 0
+}</code></pre>
+      
+      <br>
+      <div class="mr-4 badge delete">DELETE</div> 
+      <i>deleteNetworkSwitchSettingsQosRule</i>
+      <br>
+      <b>Delete a quality of service rule</b>
+      
+      <pre><code></code></pre>
+      </p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Update switch network settings</strong></p><h4 class="mr-4 badge put">PUT  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/switch/settings</code><p class="ml-5"><blockquote><p>Optional property <code>vlan</code> Added</p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Returns the switch network settings</strong></p><h4 class="mr-4 badge get">GET  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/switch/settings</code><p class="ml-5"><blockquote><p>Response property <code>vlan</code> value added:  
+      <pre><code>       
+        {
+          vlan: 100
+        }
+</code></pre></p></blockquote></p><hr><h3>Uplink settings</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Updates the uplink settings for your MX network.</strong></p><h4 class="mr-4 badge put">PUT  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/uplinkSettings</code><p class="ml-5"><blockquote><p>Property <code>limitUp</code> Deleted</p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Property <code>limitDown</code> Deleted</p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Optional property <code>wan1</code> Added</p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Optional property <code>wan2</code> Added</p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Optional property <code>cellular</code> Added</p></blockquote></p><hr><!-- Limit duplicate path details   --><h3>Admins</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Update an administrator</strong></p><h4 class="mr-4 badge put">PUT  </h4><code style="background-color:lightgray; color:black">/organizations/{organizationId}/admins/{id}</code><p class="ml-5"><blockquote><p>Property <code>email</code> Deleted</p></blockquote></p><hr><!-- Limit duplicate path details   --><h3>Devices</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>List the devices in an organization</strong></p><h4 class="mr-4 badge get">GET  </h4><code style="background-color:lightgray; color:black">/organizations/{organizationId}/devices</code><p class="ml-5"><blockquote><p>Response property <code>firmware</code> value added:  
+      <pre><code>       
+        {
+          firmware: "wireless-25-14"
+        }
+</code></pre></p></blockquote></p><hr><h3>Dashboard branding policies</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong></strong></p><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/organizations/{organizationId}/brandingPolicies</code><p class="ml-5"><blockquote><p>Path added
+      <br>
+      <div class="mr-4 badge get">GET</div> 
+      <i>getOrganizationBrandingPolicies</i>
+      <br>
+      <b>List the branding policies of an organization</b>
+      
+      <pre><code>[
+    {
+        &quot;brandingPolicyId&quot;: &quot;456&quot;,
+        &quot;name&quot;: &quot;My Branding Policy&quot;,
+        &quot;enabled&quot;: true,
+        &quot;adminSettings&quot;: {
+            &quot;appliesTo&quot;: &quot;All admins of networks...&quot;,
+            &quot;values&quot;: [
+                &quot;N_1234&quot;,
+                &quot;L_5678&quot;
+            ]
+        },
+        &quot;helpSettings&quot;: {
+            &quot;helpTab&quot;: &quot;show&quot;,
+            &quot;getHelpSubtab&quot;: &quot;default or inherit&quot;,
+            &quot;communitySubtab&quot;: &quot;show&quot;,
+            &quot;casesSubtab&quot;: &quot;hide&quot;,
+            &quot;dataProtectionRequestsSubtab&quot;: &quot;default or inherit&quot;,
+            &quot;getHelpSubtabKnowledgeBaseSearch&quot;: &quot;&lt;h1&gt;Some custom HTML content&lt;/h1&gt;&quot;,
+            &quot;universalSearchKnowledgeBaseSearch&quot;: &quot;hide&quot;,
+            &quot;ciscoMerakiProductDocumentation&quot;: &quot;show&quot;,
+            &quot;supportContactInfo&quot;: &quot;show&quot;,
+            &quot;newFeaturesSubtab&quot;: &quot;show&quot;,
+            &quot;firewallInfoSubtab&quot;: &quot;hide&quot;,
+            &quot;apiDocsSubtab&quot;: &quot;default or inherit&quot;,
+            &quot;hardwareReplacementsSubtab&quot;: &quot;hide&quot;,
+            &quot;smForums&quot;: &quot;hide&quot;
+        }
+    }
+]</code></pre>
+      
+      <br>
+      <div class="mr-4 badge post">POST</div> 
+      <i>createOrganizationBrandingPolicy</i>
+      <br>
+      <b>Add a new branding policy to an organization</b>
+      
+      <pre><code>{
+    &quot;brandingPolicyId&quot;: &quot;456&quot;,
+    &quot;name&quot;: &quot;My Branding Policy&quot;,
+    &quot;enabled&quot;: true,
+    &quot;adminSettings&quot;: {
+        &quot;appliesTo&quot;: &quot;All admins of networks...&quot;,
+        &quot;values&quot;: [
+            &quot;N_1234&quot;,
+            &quot;L_5678&quot;
+        ]
+    },
+    &quot;helpSettings&quot;: {
+        &quot;helpTab&quot;: &quot;show&quot;,
+        &quot;getHelpSubtab&quot;: &quot;default or inherit&quot;,
+        &quot;communitySubtab&quot;: &quot;show&quot;,
+        &quot;casesSubtab&quot;: &quot;hide&quot;,
+        &quot;dataProtectionRequestsSubtab&quot;: &quot;default or inherit&quot;,
+        &quot;getHelpSubtabKnowledgeBaseSearch&quot;: &quot;&lt;h1&gt;Some custom HTML content&lt;/h1&gt;&quot;,
+        &quot;universalSearchKnowledgeBaseSearch&quot;: &quot;hide&quot;,
+        &quot;ciscoMerakiProductDocumentation&quot;: &quot;show&quot;,
+        &quot;supportContactInfo&quot;: &quot;show&quot;,
+        &quot;newFeaturesSubtab&quot;: &quot;show&quot;,
+        &quot;firewallInfoSubtab&quot;: &quot;hide&quot;,
+        &quot;apiDocsSubtab&quot;: &quot;default or inherit&quot;,
+        &quot;hardwareReplacementsSubtab&quot;: &quot;hide&quot;,
+        &quot;smForums&quot;: &quot;hide&quot;
+    }
+}</code></pre>
+      </p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong></strong></p><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/organizations/{organizationId}/brandingPolicies/priorities</code><p class="ml-5"><blockquote><p>Path added
+      <br>
+      <div class="mr-4 badge get">GET</div> 
+      <i>getOrganizationBrandingPoliciesPriorities</i>
+      <br>
+      <b>Return the branding policy IDs of an organization in priority order. IDs are ordered in ascending order of priority (IDs later in the array have higher priority).</b>
+      
+      <pre><code>{
+    &quot;brandingPolicyIds&quot;: [
+        &quot;123&quot;,
+        &quot;456&quot;,
+        &quot;789&quot;
+    ]
+}</code></pre>
+      
+      <br>
+      <div class="mr-4 badge put">PUT</div> 
+      <i>updateOrganizationBrandingPoliciesPriorities</i>
+      <br>
+      <b>Update the priority ordering of an organization's branding policies.</b>
+      
+      <pre><code>{
+    &quot;brandingPolicyIds&quot;: [
+        &quot;123&quot;,
+        &quot;456&quot;,
+        &quot;789&quot;
+    ]
+}</code></pre>
+      </p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong></strong></p><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/organizations/{organizationId}/brandingPolicies/{brandingPolicyId}</code><p class="ml-5"><blockquote><p>Path added
+      <br>
+      <div class="mr-4 badge get">GET</div> 
+      <i>getOrganizationBrandingPolicy</i>
+      <br>
+      <b>Return a branding policy</b>
+      
+      <pre><code>{
+    &quot;brandingPolicyId&quot;: &quot;456&quot;,
+    &quot;name&quot;: &quot;My Branding Policy&quot;,
+    &quot;enabled&quot;: true,
+    &quot;adminSettings&quot;: {
+        &quot;appliesTo&quot;: &quot;All admins of networks...&quot;,
+        &quot;values&quot;: [
+            &quot;N_1234&quot;,
+            &quot;L_5678&quot;
+        ]
+    },
+    &quot;helpSettings&quot;: {
+        &quot;helpTab&quot;: &quot;show&quot;,
+        &quot;getHelpSubtab&quot;: &quot;default or inherit&quot;,
+        &quot;communitySubtab&quot;: &quot;show&quot;,
+        &quot;casesSubtab&quot;: &quot;hide&quot;,
+        &quot;dataProtectionRequestsSubtab&quot;: &quot;default or inherit&quot;,
+        &quot;getHelpSubtabKnowledgeBaseSearch&quot;: &quot;&lt;h1&gt;Some custom HTML content&lt;/h1&gt;&quot;,
+        &quot;universalSearchKnowledgeBaseSearch&quot;: &quot;hide&quot;,
+        &quot;ciscoMerakiProductDocumentation&quot;: &quot;show&quot;,
+        &quot;supportContactInfo&quot;: &quot;show&quot;,
+        &quot;newFeaturesSubtab&quot;: &quot;show&quot;,
+        &quot;firewallInfoSubtab&quot;: &quot;hide&quot;,
+        &quot;apiDocsSubtab&quot;: &quot;default or inherit&quot;,
+        &quot;hardwareReplacementsSubtab&quot;: &quot;hide&quot;,
+        &quot;smForums&quot;: &quot;hide&quot;
+    }
+}</code></pre>
+      
+      <br>
+      <div class="mr-4 badge put">PUT</div> 
+      <i>updateOrganizationBrandingPolicy</i>
+      <br>
+      <b>Update a branding policy</b>
+      
+      <pre><code>{
+    &quot;brandingPolicyId&quot;: &quot;456&quot;,
+    &quot;name&quot;: &quot;My Branding Policy&quot;,
+    &quot;enabled&quot;: true,
+    &quot;adminSettings&quot;: {
+        &quot;appliesTo&quot;: &quot;All admins of networks...&quot;,
+        &quot;values&quot;: [
+            &quot;N_1234&quot;,
+            &quot;L_5678&quot;
+        ]
+    },
+    &quot;helpSettings&quot;: {
+        &quot;helpTab&quot;: &quot;show&quot;,
+        &quot;getHelpSubtab&quot;: &quot;default or inherit&quot;,
+        &quot;communitySubtab&quot;: &quot;show&quot;,
+        &quot;casesSubtab&quot;: &quot;hide&quot;,
+        &quot;dataProtectionRequestsSubtab&quot;: &quot;default or inherit&quot;,
+        &quot;getHelpSubtabKnowledgeBaseSearch&quot;: &quot;&lt;h1&gt;Some custom HTML content&lt;/h1&gt;&quot;,
+        &quot;universalSearchKnowledgeBaseSearch&quot;: &quot;hide&quot;,
+        &quot;ciscoMerakiProductDocumentation&quot;: &quot;show&quot;,
+        &quot;supportContactInfo&quot;: &quot;show&quot;,
+        &quot;newFeaturesSubtab&quot;: &quot;show&quot;,
+        &quot;firewallInfoSubtab&quot;: &quot;hide&quot;,
+        &quot;apiDocsSubtab&quot;: &quot;default or inherit&quot;,
+        &quot;hardwareReplacementsSubtab&quot;: &quot;hide&quot;,
+        &quot;smForums&quot;: &quot;hide&quot;
+    }
+}</code></pre>
+      
+      <br>
+      <div class="mr-4 badge delete">DELETE</div> 
+      <i>deleteOrganizationBrandingPolicy</i>
+      <br>
+      <b>Delete a branding policy</b>
+      
+      <pre><code></code></pre>
+      </p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --></p></body><style>.post {
+  background-color: sandybrown;
+}
+.get {
+  background-color: green;
+}
+.put {
+  background-color: steelblue;
+}
+.delete {
+  background-color: tomato;
+}
+.path {
+  background-color: gray;
+}
+.names {
+  color: darkgreen;
+}
+
+      
+
+
+
+
+   
+                      </style></html>

@@ -19,14 +19,6 @@ Renamed
 Updates
 -------
 
-#### PATH
-
-`/networks/{networkID}/switchStacks/{switchStackId}/remove`
-
-> Deleted
-
-* * *
-
 ### Networks
 
 **Update the site-to-site VPN settings of a network. Only valid for MX networks in NAT mode.**
@@ -48,10 +40,6 @@ Updates
 #### PUT
 
 `/networks/{networkId}/ssids/{number}`
-
-> Property `host` became required
-
-> Property `secret` became required
 
 > Property `host` became required
 
@@ -94,7 +82,7 @@ Changes
 
 * * *
 
-**The traffic analysis data for this network. <a href="https://documentation.meraki.com/MR/Monitoring\_and\_Reporting/Hostname\_Visibility">Traffic Analysis with Hostname Visibility</a> must be enabled on the network.**
+**The traffic analysis data for this network.**
 
 #### GET
 
