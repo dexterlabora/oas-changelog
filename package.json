@@ -1,23 +1,27 @@
 {
-  "name": "swagger-changelog-utility",
-  "version": "1.0.0",
-  "description": "A simple utility to generate a changelog between two OAS files.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "commander": "^2.20.0",
-    "handlebars": "^4.1.2",
-    "pug": "^2.0.4",
-    "swagger-parser": "^8.0.0",
-    "turndown": "^5.0.3"
-  },
-  "type": "module",
-  "devDependencies": {
-    "swagger-changelog": "^1.1.0",
-    "openapi-diff": "^0.22.0"
-  }
+    "name": "swagger-changelog-utility",
+    "version": "1.0.0",
+    "description": "A simple utility to generate a changelog between two OAS files.",
+    "main": "index.js",
+    "scripts": {
+        "start": "node ./app/index.js",
+        "json-server": "http-server ./oas-file"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "commander": "^2.20.0",
+        "express": "^4.17.1",
+        "express-async-errors": "^3.1.1",
+        "handlebars": "^4.1.2",
+        "pug": "^2.0.4",
+        "swagger-parser": "^8.0.0",
+        "turndown": "^5.0.3"
+    },
+    "type": "module",
+    "devDependencies": {
+        "http-server": "^0.11.1",
+        "openapi-diff": "^0.22.0",
+        "swagger-changelog": "^1.1.0"
+    }
 }

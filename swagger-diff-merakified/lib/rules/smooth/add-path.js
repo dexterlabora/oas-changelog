@@ -63,7 +63,8 @@ function addPath(_ref) {
       // <pre><code>${JSON.stringify(rhs, null, 4)}</code></pre>`,
       messageHtml: html,
       method: path[2],
-      path: pathId
+      path: pathId,
+      details: rhs
     };
   }
   return false;

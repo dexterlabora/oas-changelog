@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <style>
+            body {
+                padding: 20px;
+            }
+            #oldSpec,
+            #newSpec,
+            #jsonResult {
+                width: 80%;
+            }
+            #jsonResult {
+                margin-top: 10px;
+                height: 400px;
+            }
+            #htmlContent {
+                margin-top: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <label>oldSpec: </label>
+        <input id="oldSpec" />
+        <br />
+
+        <label>newSpec: </label>
+        <input id="newSpec" />
+        <br />
+
+        <button id="submit">submit</button>
+        <br />
+
+        <div id="htmlContent"></div>
+        <br />
+        <textarea id="jsonResult"></textarea>
+        <br />
+
+        <script>
+            const newSpec = document.getElementById("newSpec");
+            const oldSpec = document.getElementById("oldSpec");
+            const submitBtn = document.getElementById("submit");
+            const jsonResult = document.getElementById("jsonResult");
+            const htmlContent = document.getElementById("htmlContent");
+
+            oldSpec.value =
+                "https://raw.githubusercontent.com/meraki/openapi/master/openapi/0.3.0/spec2.json";
+            newSpec.value =
+                "https://raw.githubusercontent.com/meraki/openapi/master/openapi/spec2.json";
+
+            submitBtn.addEventListener("click", function() {
+                fetch("/swagger/diff", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        oldSpec: oldSpec.value,
+                        newSpec: newSpec.value,
+                        location: "./output/"
+                    })
+                })
+                    .then(response => {
+                        return response.json();
+                    })
+                    .then(json => {
+                        const html = json.html;
+                        htmlContent.innerHTML = html;
+                        delete json.html;
+                        jsonResult.value = JSON.stringify(json);
+                    });
+
+                jsonResult.value = "loading....";
+                htmlContent.innerHTML = "loading...";
+            });
+        </script>
+    </body>
+</html>

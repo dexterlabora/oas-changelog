@@ -38,8 +38,8 @@ const TYPE_MAP = {
  *    }
  * ]
  */
-function diff(oldSpec, newSpec) {
-  return SwaggerDiff(oldSpec, newSpec).then(
+function diff(oldSpec, newSpec, config) {
+  return SwaggerDiff(oldSpec, newSpec, config).then(
     diff =>
       new Promise(resolve => {
         const retVal = [];
@@ -74,7 +74,9 @@ function detectRenames(diff, config) {
   const changes = {
     endpoints: {
       deleted: [],
-      added: []
+      deletedObj: [],
+      added: [],
+      addedObj: []
     },
     args: {
       deleted: [],
@@ -94,9 +96,11 @@ function detectRenames(diff, config) {
     switch (change.ruleId) {
       case "delete-path":
         changes.endpoints.deleted.push(`\`${change.path}\``);
+        changes.endpoints.deletedObj.push(change);
         break;
       case "add-path":
         changes.endpoints.added.push(change.path);
+        changes.endpoints.addedObj.push(change);
         break;
       case "add-required-param":
       case "add-param":
@@ -118,10 +122,20 @@ function detectRenames(diff, config) {
   }
 
   // compare and look for similar items
-  for (let endpoint of changes.endpoints.deleted) {
-    const closest = changes.endpoints.added.reduce(
+  for (let endpoint of changes.endpoints.deletedObj) {
+    const closest = changes.endpoints.addedObj.reduce(
       (best, addedEndpoint) => {
-        const ldiff = new Levenshtein(endpoint, addedEndpoint);
+        // console.log("endpoint ", endpoint);
+        const endpointKeys = Object.keys(endpoint.details);
+        // console.log("endpoint.details", endpoint.details);
+
+        // console.log("addedEndpoint", addedEndpoint);
+        // console.log("addedEndpoint.details", addedEndpoint.details);
+
+        const ldiff = new Levenshtein(
+          JSON.stringify(endpoint.details),
+          JSON.stringify(addedEndpoint.details)
+        );
         if (ldiff.similarity > best.similarity) {
           best.endpoint = addedEndpoint;
           best.similarity = ldiff.similarity;
@@ -137,7 +151,8 @@ function detectRenames(diff, config) {
       // strip out the add/deleted
       retVal = retVal.filter(item => {
         return !(
-          (item.path === endpoint || item.path === closest.endpoint) &&
+          (item.path === endpoint.path ||
+            item.path === closest.endpoint.path) &&
           (item.ruleId === "delete-path" || item.ruleId === "add-path")
         );
       });
@@ -145,16 +160,51 @@ function detectRenames(diff, config) {
       // add the rename
       retVal.push({
         ruleId: "rename-path",
-        message: `Path \`${endpoint}\` renamed to \`${closest.endpoint}\``,
-        messageHtml: `Path <code>${endpoint}</code> renamed to <code>${
-          closest.endpoint
-        }</code>`,
-        path: endpoint,
-        newPath: closest.endpoint,
+        message: `Path \`${endpoint.path}\` renamed to \`${closest.endpoint.path}\``,
+        messageHtml: `Path <code>${endpoint.path}</code> renamed to <code>${closest.endpoint.path}</code>`,
+        path: endpoint.path,
+        newPath: closest.endpoint.path,
         type: "renamed"
       });
     }
   }
+
+  // // compare and look for similar items
+  // for (let endpoint of changes.endpoints.deleted) {
+  //   const closest = changes.endpoints.added.reduce(
+  //     (best, addedEndpoint) => {
+  //       const ldiff = new Levenshtein(endpoint, addedEndpoint);
+  //       if (ldiff.similarity > best.similarity) {
+  //         best.endpoint = addedEndpoint;
+  //         best.similarity = ldiff.similarity;
+  //       }
+
+  //       return best;
+  //     },
+  //     { endpoint: "", similarity: 0 }
+  //   );
+
+  //   if (closest.similarity >= (parseFloat(THRESHOLD_ENDPOINT) || 0.85)) {
+  //     // we have  a match
+  //     // strip out the add/deleted
+  //     retVal = retVal.filter(item => {
+  //       return !(
+  //         (item.path === endpoint || item.path === closest.endpoint) &&
+  //         (item.ruleId === "delete-path" || item.ruleId === "add-path")
+  //       );
+  //     });
+
+  //     // add the rename
+  //     retVal.push({
+  //       ruleId: "rename-path",
+  //       message: `Path \`${endpoint}\` renamed to \`${closest.endpoint}\``,
+  //       messageHtml: `Path <code>${endpoint}</code> renamed to <code>${closest.endpoint}</code>`,
+  //       path: endpoint,
+  //       newPath: closest.endpoint,
+  //       type: "renamed"
+  //     });
+  //   }
+  // }
 
   for (let param of changes.args.deleted) {
     const closest = changes.args.added.reduce(
@@ -187,12 +237,8 @@ function detectRenames(diff, config) {
       // add the rename
       retVal.push({
         ruleId: "rename-param",
-        message: `\`${param.path}\` (*${param.method}*) - Param \`${
-          param.param
-        }\` renamed to \`${closest.param.param}\``,
-        messageHtml: `Param <code>${param.param}</code> renamed to <code>${
-          closest.param.param
-        }</code>`,
+        message: `\`${param.path}\` (*${param.method}*) - Param \`${param.param}\` renamed to \`${closest.param.param}\``,
+        messageHtml: `Param <code>${param.param}</code> renamed to <code>${closest.param.param}</code>`,
         path: param.path,
         method: param.method,
         param: param.param,
@@ -278,7 +324,7 @@ function changelog(oldSpec, newSpec, config) {
     thresholds: config.thresholds || {}
   };
 
-  return diff(oldSpec, newSpec)
+  return diff(oldSpec, newSpec, config)
     .then(res => {
       return buildChangelog(detectRenames(res, detectConfig));
     })

@@ -1,0 +1,11 @@
+@base = http://localhost:3000
+
+# Diff API Test 1
+POST {{base}}/swagger/diff
+Content-Type: application/json
+
+{
+    "oldSpec": "http://localhost:3001/Meraki openapiSpec 20-apr-19.json",
+    "newSpec": "http://localhost:3001/Meraki openapiSpec 26-apr-19.json",
+    "location": "./output"
+}
